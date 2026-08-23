@@ -461,17 +461,19 @@
     - {type: birth, date: 1958-11-21, sources: [typed-chart]}
 
 - id: barrie-robison-1970
-  names: [{given: Barrie, surname: Robison, sources: [obit-bill-2011, alhs]}]
+  names: [{given: Barrie, surname: Robison, sources: [obit-bill-2011, alhs, family-knowledge]}]
   sex: M
   events:
-    - {type: birth, date: abt 1970, place: nakusp, sources: [alhs], note: Held as an infant by his father at the 1 July 1972 Canada Day parade (ALHS 2014.018.2628).}
+    - {type: birth, date: 1970-12-04, place: trail-bc, sources: [family-knowledge], note: "Supplied by Barrie Robison, Aug 2026."}
+    - {type: residence, date: 1972-07, place: nakusp, sources: [alhs], note: "Held as an infant by his father at the 1 July 1972 Canada Day parade (ALHS 2014.018.2628)."}
   notes: Named for his grandfather. The only archival record in Nakusp naming this generation is the 1972 parade photograph.
-  todo:
-    - Exact birth date (family knowledge).
 - id: leslie
-  names: [{given: Leslie, surname: null, sources: [robison-line-report]}]
+  names: [{given: Leslie, surname: null, sources: [robison-line-report, family-knowledge]}]
+  sex: F
+  events:
+    - {type: birth, date: 1969-10-04, place: pullman-wa, sources: [family-knowledge], note: "Supplied by Barrie Robison, Aug 2026."}
   todo:
-    - Surname and birth date.
+    - Maiden name.
 - id: zane-robison-1972
   names: [{given: Zane, surname: Robison, sources: [obit-bill-2011, unbc-wall]}]
   sex: M
@@ -538,10 +540,14 @@
     - {type: birth, date: 2018-08-19, sources: [family-knowledge], note: "Supplied by Barrie Robison, Aug 2026."}
 
 - id: jacob-robison
-  names: [{given: Jacob, surname: Robison, sources: [obit-bill-2011]}]
+  names: [{given: Jacob, surname: Robison, sources: [obit-bill-2011, family-knowledge]}]
   sex: M
+  events:
+    - {type: birth, date: 2001-02-24, place: corvallis-or, sources: [family-knowledge], note: "Supplied by Barrie Robison, Aug 2026."}
   notes: Named as a grandson in Bill's 2011 obituary.
 - id: nicholas-robison
-  names: [{given: Nicholas, surname: Robison, sources: [obit-bill-2011]}]
+  names: [{given: Nicholas, surname: Robison, nickname: Nick, sources: [obit-bill-2011, family-knowledge]}]
   sex: M
+  events:
+    - {type: birth, date: 2004-04-25, place: pullman-wa, sources: [family-knowledge], note: "Supplied by Barrie Robison, Aug 2026."}
   notes: Named as a grandson in Bill's 2011 obituary.

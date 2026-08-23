@@ -171,7 +171,7 @@
   events:
     - {type: marriage, date: 1995-05-20, place: pullman-wa, sources: [family-knowledge], note: "Supplied by Barrie Robison, Aug 2026."}
   children:
-    - {person: jacob-robison, confidence: unverified, sources: [obit-bill-2011],
-       basis: "Obituary names Jacob and Nicholas only as Bill's grandsons; it does not say which son is the father. Placed under Barrie following the report's chart — confirm."}
-    - {person: nicholas-robison, confidence: unverified, sources: [obit-bill-2011],
-       basis: "As for Jacob."}
+    - {person: jacob-robison, confidence: documented, sources: [family-knowledge, obit-bill-2011],
+       basis: "Confirmed by Barrie Robison (father), Aug 2026. Obituary names Jacob and Nicholas as Bill's grandsons."}
+    - {person: nicholas-robison, confidence: documented, sources: [family-knowledge, obit-bill-2011],
+       basis: "Confirmed by Barrie Robison (father), Aug 2026."}
