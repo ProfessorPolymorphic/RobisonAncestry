@@ -500,6 +500,15 @@
   sex: F
   events:
     - {type: birth, date: 1983-11-20, sources: [typed-chart]}
+- id: andi-raine-hakeman-2012
+  names: [{given: Andi Raine, surname: Hakeman, sources: [family-knowledge]}]
+  events:
+    - {type: birth, date: 2012-06-15, sources: [family-knowledge], note: "Supplied by Barrie Robison, Aug 2026."}
+- id: rhys-spencer-hakeman-2014
+  names: [{given: Rhys Spencer, surname: Hakeman, sources: [family-knowledge]}]
+  events:
+    - {type: birth, date: 2014-08-19, sources: [family-knowledge], note: "Supplied by Barrie Robison, Aug 2026."}
+
 - id: jordan-ross-hakeman-1985
   names: [{given: Jordan Ross, surname: Hakeman, sources: [typed-chart], note: Surname assumed from father.}]
   events:

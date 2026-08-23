@@ -126,6 +126,16 @@
     - {person: krista-lee-hakeman-1983}
     - {person: jordan-ross-hakeman-1985}
 
+- id: krista-lee
+  partners: [krista-lee-hakeman-1983]
+  sources: [family-knowledge]
+  notes: Other parent not yet recorded.
+  children:
+    - {person: andi-raine-hakeman-2012, confidence: documented, sources: [family-knowledge],
+       basis: "Stated by Barrie Robison (first cousin once removed), Aug 2026."}
+    - {person: rhys-spencer-hakeman-2014, confidence: documented, sources: [family-knowledge],
+       basis: "Stated by Barrie Robison (first cousin once removed), Aug 2026."}
+
 - id: bill+pat
   partners: [william-james-robison-1938, patricia-parsons]
   sources: [obit-bill-2011]

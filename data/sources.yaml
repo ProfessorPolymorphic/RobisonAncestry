@@ -224,3 +224,13 @@
     Born Carman, Manitoba; grew up mainly in Field, BC; CP Rail telegrapher as a teenager, 43 years
     with CP Rail, retired 1986 as customer-service supervisor; last ten years in Golden; died Golden
     25 Aug 2013 aged 85.
+
+- id: family-knowledge
+  title: Family knowledge — facts supplied directly by family members
+  type: family-chart
+  tier: compiled
+  author: Barrie Robison and relatives, as noted on each fact
+  note: >
+    Names and dates given from personal knowledge rather than a document. Use this id for anything
+    a living relative tells you; add a note saying who, and replace or supplement with a document
+    (birth certificate, announcement) when one is available.
