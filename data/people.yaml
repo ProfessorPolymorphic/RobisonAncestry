@@ -514,6 +514,15 @@
   events:
     - {type: birth, date: 1985-01-16, sources: [typed-chart]}
 
+- id: alexi-grace-hakeman-2007
+  names: [{given: Alexi Grace, surname: Hakeman, sources: [family-knowledge]}]
+  events:
+    - {type: birth, date: 2007-12-08, sources: [family-knowledge], note: "Supplied by Barrie Robison, Aug 2026."}
+- id: riley-michael-hakeman-2015
+  names: [{given: Riley Michael, surname: Hakeman, sources: [family-knowledge]}]
+  events:
+    - {type: birth, date: 2015-05-09, sources: [family-knowledge], note: "Supplied by Barrie Robison, Aug 2026."}
+
 - id: jacob-robison
   names: [{given: Jacob, surname: Robison, sources: [obit-bill-2011]}]
   sex: M
