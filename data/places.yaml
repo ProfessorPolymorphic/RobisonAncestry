@@ -84,3 +84,45 @@
   name: Corvallis, Oregon, USA
   lat: 44.56
   lon: -123.26
+- id: locie-cemetery
+  name: Locie Cemetery, Stinson's Block, Hillier Township, Prince Edward County, Ontario
+  lat: 43.97
+  lon: -77.57
+  note: Lot 10/11, south shore of Wellers Bay. Hugh's homestead burial ground ("Robison Point" nearby).
+- id: belleville-on
+  name: Belleville, Ontario
+  lat: 44.16
+  lon: -77.38
+- id: hastings-on
+  name: Hastings, Ontario
+  lat: 44.31
+  lon: -77.96
+- id: revelstoke-bc
+  name: Revelstoke, British Columbia
+  lat: 50.998
+  lon: -118.20
+- id: sorel-qc
+  name: Sorel, Quebec
+  lat: 46.04
+  lon: -73.11
+- id: prince-albert-sk
+  name: Prince Albert, Saskatchewan (North-West Territories before 1905)
+  lat: 53.20
+  lon: -105.75
+- id: culross-on
+  name: Culross Township, Bruce County, Ontario
+  lat: 44.02
+  lon: -81.27
+- id: petersfield-mb
+  name: Petersfield (originally St. Louis), Manitoba
+  lat: 50.33
+  lon: -96.98
+  note: Town founded by F.-X. St. Louis; renamed Petersfield. Streets named after his children.
+- id: calgary-ab
+  name: Calgary, Alberta
+  lat: 51.05
+  lon: -114.07
+- id: ottawa-on
+  name: Ottawa, Ontario
+  lat: 45.42
+  lon: -75.70

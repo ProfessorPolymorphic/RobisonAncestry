@@ -49,12 +49,20 @@
     - {person: nancy-j-robison-1848, confidence: inferred, sources: [census-1851]}
     - {person: margaret-v-robison-1852, confidence: inferred, sources: [census-1861]}
 
+- id: samual-weeks+katherine
+  partners: [samual-weeks-1792, katherine-winne-1794]
+  sources: [weeks-barringer-record]
+  children:
+    - {person: nancy-m-barringer-1818, confidence: documented, sources: [weeks-barringer-record],
+       basis: "'Nancy Maria Weeks, daughter of Samual Weeks.'"}
+
 - id: walter+nancy-barringer
   partners: [walter-l-barringer-1811, nancy-m-barringer-1818]
-  sources: [census-1861]
+  sources: [census-1861, weeks-barringer-record]
+  notes: "Their children per Appendix C: Samual, Wesley, Angeline and Mary — only Mary is entered individually so far."
   children:
-    - {person: mary-e-barringer-1844, confidence: documented, sources: [on-marriages],
-       basis: "Marriage register names her as dau. of Walter L. and Nancy M. Barringer."}
+    - {person: mary-e-barringer-1844, confidence: documented, sources: [on-marriages, weeks-barringer-record],
+       basis: "Marriage register names her as dau. of Walter L. and Nancy M. Barringer; Appendix C: 'Mary Elizabeth Barringer, daughter of Nancy M. Weeks and W.L. Barringer.'"}
 
 - id: william-a+mary-e
   partners: [william-a-robison-1839, mary-e-barringer-1844]
@@ -72,7 +80,8 @@
 - id: herbert-e+annie
   partners: [herbert-edward-robison-1869, annie-falconer-1880]
   events:
-    - {type: marriage, date: 1900-07-11, sources: [mhs-robison-he, typed-chart]}
+    - {type: marriage, date: 1900-07-11, place: belleville-on, sources: [mhs-robison-he, journey-so-far-2006, typed-chart],
+       note: "At the Presbyterian Church in Belleville, Ontario."}
   children:
     - {person: ivan-campbell-robison-1901, confidence: documented, sources: [mb-vitals]}
     - {person: william-james-robison-1902, confidence: documented, sources: [mb-vitals]}
@@ -84,7 +93,12 @@
 - id: ivan+corinne
   partners: [ivan-campbell-robison-1901, corinne-saint-louis]
   events:
-    - {type: marriage, date: 1929, place: winnipeg, sources: [mb-vitals]}
+    - {type: marriage, date: 1929-06-29, place: winnipeg, sources: [journey-so-far-2006, mb-vitals],
+       note: "Corinne's memoir and Paul's book give 29 June 1929; the Manitoba index has the year."}
+  children:
+    - {person: barrie-st-louis-robison-1930, confidence: documented, sources: [journey-so-far-2006]}
+    - {person: paul-athol-robison-1935, confidence: documented, sources: [journey-so-far-2006], basis: "The author, writing of his own parents."}
+    - {person: ivan-michael-robison-1938, confidence: documented, sources: [journey-so-far-2006]}
 
 - id: william-f+audrey
   partners: [william-falconer-robison-1908, audrey-louise-french-bossy]
@@ -175,3 +189,51 @@
        basis: "Confirmed by Barrie Robison (father), Aug 2026. Obituary names Jacob and Nicholas as Bill's grandsons."}
     - {person: nicholas-robison, confidence: documented, sources: [family-knowledge, obit-bill-2011],
        basis: "Confirmed by Barrie Robison (father), Aug 2026."}
+
+- id: spencer+eva
+  partners: [spencer-lewis, eva-lewis]
+  sources: [lewis-family-photo-1911]
+  children:
+    - {person: tom-lewis, confidence: stated, sources: [lewis-family-photo-1911]}
+    - {person: daisy-lewis, confidence: stated, sources: [lewis-family-photo-1911]}
+    - {person: jean-lillian-lewis-1909, confidence: inferred, sources: [lewis-family-photo-1911, jean-memorial-card-1976, spencer-lewis-clipping],
+       basis: "1911 family photo caption names Jean among Spencer and Eva's children; Jean's memorial card has her born at Eastport Aug 1909, where Spencer had been the customs officer since 1907."}
+
+- id: fx+sarah
+  partners: [francois-xavier-st-louis-1859, sarah-jane-stutt-1868]
+  events:
+    - {type: marriage, date: 1891-12-29, place: culross-on, sources: [journey-so-far-2006],
+       note: "At her parents' residence in Bruce County; they had met on a train c.1888."}
+  notes: "Five children; the first, a son born 10 Oct 1892, died at ten months (24 Aug 1893) and is not entered individually."
+  children:
+    - {person: edith-st-louis-1895, confidence: documented, sources: [journey-so-far-2006]}
+    - {person: archie-romuald-st-louis-1897, confidence: documented, sources: [journey-so-far-2006]}
+    - {person: john-st-louis-1897, confidence: documented, sources: [journey-so-far-2006]}
+    - {person: corinne-saint-louis, confidence: documented, sources: [journey-so-far-2006], basis: "Corinne's own memoir: 'I was born on the 4th April 1905' in Winnipeg."}
+
+- id: archibald+margaret-stutt
+  partners: [archibald-stutt-1841, margaret-brown-stutt]
+  sources: [journey-so-far-2006]
+  children:
+    - {person: sarah-jane-stutt-1868, confidence: documented, sources: [journey-so-far-2006]}
+
+- id: barrie-stl+eleanor
+  partners: [barrie-st-louis-robison-1930, eleanor-stl]
+  sources: [journey-so-far-2006]
+
+- id: paul+adrienne
+  partners: [paul-athol-robison-1935, adrienne-allan]
+  events:
+    - {type: marriage, date: 1960-12, sources: [journey-so-far-2006]}
+    - {type: divorce, date: 1975, sources: [journey-so-far-2006]}
+  children:
+    - {person: cheryl-dawn-robison-1962, confidence: documented, sources: [journey-so-far-2006]}
+    - {person: elisa-rae-robison-1965, confidence: documented, sources: [journey-so-far-2006]}
+
+- id: elisa-rae
+  partners: [elisa-rae-robison-1965]
+  sources: [journey-so-far-2006]
+  notes: Other parent not recorded in the book.
+  children:
+    - {person: tessa-rae-hamelin-1985, confidence: documented, sources: [journey-so-far-2006]}
+    - {person: curtis-seth-hamelin-1988, confidence: documented, sources: [journey-so-far-2006]}

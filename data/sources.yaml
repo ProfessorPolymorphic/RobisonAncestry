@@ -234,3 +234,134 @@
     Names and dates given from personal knowledge rather than a document. Use this id for anything
     a living relative tells you; add a note saying who, and replace or supplement with a document
     (birth certificate, announcement) when one is available.
+
+# ---- added 2026-08-23 from Colby's photographs (scans/PicturesfromColbyAug23_2026) ----
+
+- id: journey-so-far-2006
+  title: '"A Journey So Far" — family history by Paul A. Robison'
+  type: book
+  tier: compiled
+  date: 2006
+  author: Paul Athol Robison (b. 1935), son of Ivan Campbell Robison
+  files:
+    - "scans/PicturesfromColbyAug23_2026/IMG_5293.HEIC"
+  note: >
+    Bound family history, Fall 2006, inscribed "Cousin Bert Robison from his cousin Paul Robison".
+    Covers the Robison paternal line (with headstone transcriptions and the family bible, which
+    spells "Rebeca" and "Samuel"), the St. Louis / Gadiou-Saint-Louis maternal line back to Pierre
+    Gadois (Montreal, 1636), the Stutt (Palatine German -> Irish) line, the Falconer/Campbell
+    origin of Annie, a family medical history (Appx Q), and Paul's 1994 grant of arms (Appx P).
+    States the typed descendant chart was created by cousin Herbert (Bert) Robison. Reports that a
+    professional genealogist DISPROVED the family's United Empire Loyalist claims (Weeks/Dougal) in
+    2004. Photographed Aug 2026; pages at IMG_5293-5329.
+
+- id: bert-chart-appx-a
+  title: Typed descendant chart, Appendix A version (with month/day dates)
+  type: family-chart
+  tier: compiled
+  author: Herbert Spencer "Bert" Robison, per "A Journey So Far"
+  files:
+    - "scans/PicturesfromColbyAug23_2026/IMG_5290.HEIC"
+  note: >
+    The copy of the typed chart bound into "A Journey So Far" as Appendix A, annotated by Paul
+    ("my father" at Ivan). Carries fuller dates than the copy scanned as "family tree 001.jpg" and
+    agrees with the headstones where they overlap (Hugh Nov 1762 - 18 Jun 1844; Rebecca Oct 1767 -
+    31 Aug 1850; Samuel Sept 1804 - Aug 1876; Jane Arthur Jan 1814 - Mar 1872; Annie b. 30 Dec 1880).
+    The other copy's 1766/1842/1766/1852 dates appear to be retyping errors.
+
+- id: robison-headstones
+  title: Headstone transcriptions — Locie Cemetery (Hillier) and Carman, Manitoba
+  type: cemetery
+  tier: derivative
+  files:
+    - "scans/PicturesfromColbyAug23_2026/IMG_5306.HEIC"
+  note: >
+    Appendix D of "A Journey So Far". Locie Cemetery, Stinson's Block, Hillier Township, lot 10/11,
+    south shore of Wellers Bay: Hugh Robison (Nov 1762 - 18 Jun 1844) & Rebecca Dougall (Oct 1767 -
+    31 Aug 1850); Samual J. Robison (Sept 1804 - 24 Aug 1876) & Jane Arthur (Jan 1814 - 28 Mar 1872).
+    Carman, Manitoba: William A. Robison (7 Nov 1839 - 13 Nov 1916) & Mary E. Barringer (11 Mar 1844 -
+    25 Aug 1923); Herbert E. Robison (19 Mar 1868 - 18 Jul 1933) & Anna Falconer (30 Dec 1880 - 5 Jul 1933).
+
+- id: weeks-barringer-record
+  title: Typed family record — Weeks, Winne and Barringer families
+  type: family-chart
+  tier: compiled
+  files:
+    - "scans/PicturesfromColbyAug23_2026/IMG_5305.HEIC"
+  note: >
+    Appendix C of "A Journey So Far". Samual Weeks (b. 14 Dec 1792, d. 1870, buried Stinson's Block
+    cemetery near Weller's Bay) m. Katherine Winne / Catherin Wynn (b. 19 Jul 1794, immigrated from
+    England, d. 1870 aged 75). Daughter Nancy Maria Weeks (b. 3 Nov 1819, d. 1 Dec 1853, buried in
+    the family plot) m. Walter Levi Barringer, M.D., who drowned at Hastings, Ont. on 24 Jan 1878.
+    Their children: Samual, Wesley, Angeline and Mary. Mary Elizabeth Barringer (11 Mar 1844 -
+    25 Aug 1923, buried Carman) m. William A. Robison (d. Nov 1916, buried Carman).
+
+- id: bc-death-cert-1965
+  title: BC Certificate of Death — Herbert Beringer Robison, 12 May 1965, Nakusp
+  type: register
+  tier: primary
+  date: 1965-05-17
+  files:
+    - "scans/PicturesfromColbyAug23_2026/IMG_5330.HEIC"
+  note: >
+    Certified extract, Division of Vital Statistics, sealed, issued at Nakusp 17 May 1965 by
+    O.H. Zorn, District Registrar. Name as registered: "Herbert Beringer ROBISON" — so the BC
+    index's "Beringer" is the registered spelling, not a transcription slip. Died 12 May 1965 at
+    Nakusp; age last birthday 61; male; birthplace "Carmen, Manitoba"; residence Nakusp.
+
+- id: jean-memorial-card-1976
+  title: Memorial card — Jean L. Robison, Nakusp, 1976
+  type: newspaper
+  tier: primary
+  date: 1976-07
+  files:
+    - "scans/PicturesfromColbyAug23_2026/IMG_5331.HEIC"
+    - "scans/PicturesfromColbyAug23_2026/IMG_5332.HEIC"
+  note: >
+    Valley Funeral Home, Nakusp. Died 18 July 1976 in the Arrow Lakes Hospital, aged 66; BORN
+    8 AUGUST 1909 IN EASTPORT, IDAHO. Taught in the children's school in Nakusp for many years,
+    assisted in the Nakusp library for many years; Pythian Sister and O.E.S. member. Predeceased
+    by husband Barrie in 1965; survived by sons H.S. (Bert) of Revelstoke and William (Bill) of
+    Nakusp, and four grandchildren. Service St. Marks Church 22 July 1976; cremation at Penticton.
+
+- id: bill-memorial-2011
+  title: Memorial service programs — William James Robison, May 2011
+  type: newspaper
+  tier: primary
+  date: 2011-05-16
+  files:
+    - "scans/PicturesfromColbyAug23_2026/IMG_5333.HEIC"
+    - "scans/PicturesfromColbyAug23_2026/IMG_5334.HEIC"
+    - "scans/PicturesfromColbyAug23_2026/IMG_5335.HEIC"
+    - "scans/PicturesfromColbyAug23_2026/IMG_5336.HEIC"
+  note: >
+    "Beloved Father, Teacher, and Friend — William James Robison, August 1st 1938 - May 11th 2011."
+    Memorial service 16 May 2011, 5pm, Nakusp Secondary School Gymnasium; MC Bill Johnston; speakers
+    Zane Robison, Bill Johnston, Christa Rebman, Barrie Robison. Donations to the Bill Robison
+    Memorial Scholarship Fund, CIBC Nakusp. Program reprints "To Sir, With Love" as sung to
+    "Mr. Robison" by the NSS graduating class of 1976.
+
+- id: spencer-lewis-clipping
+  title: Newspaper clipping — Spencer Lewis retires after 36 years as U.S. Customs officer at Eastport
+  type: newspaper
+  tier: primary
+  date: abt 1943
+  files:
+    - "scans/PicturesfromColbyAug23_2026/IMG_5291.HEIC"
+  note: >
+    "RETIRES WITH 36 YEARS AS U.S. OFFICER — Spencer Lewis, U.S. Customs Official At Eastport,
+    Takes Well-Earned Vacation — ARRIVED HERE 1907." Came west out of Michigan January 1907;
+    36 years as customs patrolman/officer at Eastport, Idaho. Undated clipping, c.1943. This is
+    the same Eastport crossing where Herbert Barringer Robison's US border-crossing record was made.
+
+- id: lewis-family-photo-1911
+  title: Photograph — the Lewis family at Eastport, Idaho, c.1911
+  type: family-chart
+  tier: primary
+  date: abt 1911
+  files:
+    - "scans/PicturesfromColbyAug23_2026/IMG_5292.HEIC"
+  note: >
+    Captioned "SPENCER - EVA - TOM - DAISY - JEAN, LEWIS — EASTPORT IDAHO APPROX 1911".
+    Jean (b. Aug 1909) is the toddler. Identifies Jean Lillian Lewis's parents as Spencer and Eva
+    Lewis and her siblings as Tom and Daisy.

@@ -111,16 +111,21 @@ Three inputs were merged:
 | `typed-chart` | the cousin's typewritten chart (`family tree 001.jpg`) — nine generations, exact dates, no citations |
 | `robison-line-report` | the 2026 research report (`The-Robison-Line_1.docx`) — censuses, vital indexes, cemetery, newspapers |
 | `golden-field-lineage` | the working summary (`The Golden–Field–Nakusp Robison Lineage.md`) — found the 1904 county history, the Manitoba Historical Society biography and Bert's 2013 obituary |
+| `journey-so-far-2006` + eight document sources | Colby's Aug 2026 photographs (`scans/PicturesfromColbyAug23_2026/`) of Paul A. Robison's bound family history **"A Journey So Far"** (2006) and loose family papers: headstone transcriptions, the 1965 BC death certificate, Jean's memorial card, Bill's funeral programs, the Spencer Lewis clipping and the 1911 Lewis family photo |
 
-They agree on the spine (Hugh → Samuel → William A. → Herbert Edward → Herbert Barringer → Bill →
-Barrie/Zane) and disagree in six places, all kept side by side (`tree.py conflicts`):
+They agree on the spine (Hugh → Samuel → William Arthur → Herbert Edward → Herbert Barringer →
+Bill → Barrie/Zane). `tree.py conflicts` tracks 13 disagreements, the notable ones being:
 
-1. Samuel's birth — c.1802 (three censuses) vs 1805 (chart).
-2. Samuel's wife — Jane **Arthur** (1904 county history + chart; now preferred) vs Jane **Buchanan** (the report's reading of the 1851 index).
-3. Eliza **A.** vs Eliza **E.**
-4. Herbert Edward's birth — 19 Mar **1869** (MHS, vitals index, census) vs 19 Mar **1868** (chart).
-5. Anna Falconer's birth — 31 Dec 1880 (vitals index) vs 1882 (MHS).
-6. Herbert B. & Jean's marriage — 12 Apr 1927 (chart) vs c.1930 (report's guess).
+1. **Hugh and Rebecca's dates** — the headstones (Nov 1762 – 18 Jun 1844; Oct 1767 – 31 Aug 1850)
+   contradict the retyped chart (1766–1842; 1766–1852). Headstones now preferred.
+2. **Jane Arthur vs Jane Buchanan** — her headstone reads JANE ARTHUR (Jan 1814 – 28 Mar 1872),
+   effectively refuting the report's Buchanan inference.
+3. **Samuel's death** — headstone 24 Aug 1876 vs Ontario index 1875.
+4. **Herbert Edward's birth** — 19 Mar 1869 (vitals index, MHS, census age) vs 19 Mar 1868 (his own
+   headstone, both charts and Paul's book). Genuinely unresolved; he was born pre-registration.
+5. **Anna Falconer's birth** — 30 Dec 1880 (stone) vs 31 Dec 1880 (index) vs 1882 (MHS).
+6. **Herbert B. & Jean's marriage** — 12 Apr 1927 (chart) vs c.1930 (report's guess). With Jean now
+   known to be an Eastport, Idaho girl, the marriage likely happened in the Idaho/BC border country.
 
 What each source uniquely contributed:
 
@@ -134,19 +139,25 @@ What each source uniquely contributed:
   inferred — plus Herbert Edward as lawyer, mayor of Carman 1911–13 and KC; and Bert's obituary
   (Field BC childhood, 43 years CP Rail, d. Golden 25 Aug 2013).
 
+What the Aug 2026 photo trove settled: Jean's family (Spencer & Eva Lewis of Eastport, Idaho —
+which also explains Herbert's Eastport border crossing), the 1965 death certificate (12 May 1965,
+and "Beringer" is the registered spelling, not an index error), Bill's exact death date, the
+Barringer ancestry (Dr. Walter Levi Barringer; Nancy Maria Weeks; Samual Weeks & Katherine Winne),
+the chart's authorship (Bert), and Ivan's whole branch including Paul Athol Robison, author of
+"A Journey So Far". Paul also reports that a professional genealogist **disproved** the family's
+United Empire Loyalist claims in 2004, and that the family bible spells "Rebeca" and "Samuel".
+
 ### Open questions
 
-* **Jean's maiden name.** The chart says Lewis; no primary record confirms it yet. A Manitoba
-  marriage registration for Herbert B. Robison and Jean (c.1925–28) or Bert's 1928 birth
-  registration would settle it — the single most valuable next document.
-* **Samuel's birthplace.** If the family was in New Brunswick until c.1806, Samuel (b. c.1802–05)
-  was born there, not in Upper Canada as the census "Canada" suggests.
+* **Herbert Edward: 1868 or 1869?** Stone and family papers vs index and census. A delayed birth
+  registration or baptism record would settle it.
 * **Tyrone vs Clan Gunn.** A Presbyterian Tyrone origin suggests Ulster-Scots background but does
-  not reach Caithness. A land petition naming Hugh's parish, or a Y-DNA test against the Clan Gunn
-  project, is the way to settle it.
-* **Jacob and Nicholas** are named in Bill's obituary only as grandsons; they are placed under
-  Barrie as `unverified` — Barrie can simply confirm.
-* `tree.py todo` lists the rest (Leslie's surname, BC death registrations to order, etc.).
+  not reach Caithness. Paul's book asserts the Gunn sept connection (his arms carry Gunn elements);
+  the documentary trail still starts at Hugh. Land petition or Y-DNA.
+* **Annie's parents** — a Falconer father and a Campbell mother, from Scotland 1850s/60s; names unknown.
+* **Spencer and Eva Lewis** — full dates and Eva's maiden name; the Boundary County, Idaho censuses
+  (1910/20/30) would give the household.
+* `tree.py todo` lists the rest.
 
 ## Generation numbering
 
