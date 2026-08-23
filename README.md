@@ -153,7 +153,13 @@ United Empire Loyalist claims in 2004, and that the family bible spells "Rebeca"
   registration or baptism record would settle it.
 * **Tyrone vs Clan Gunn.** A Presbyterian Tyrone origin suggests Ulster-Scots background but does
   not reach Caithness. Paul's book asserts the Gunn sept connection (his arms carry Gunn elements);
-  the documentary trail still starts at Hugh. Land petition or Y-DNA.
+  the documentary trail still starts at Hugh. Land petition or Y-DNA. Reference links (per Colby):
+  the [CGSNA sept list](https://cgsna.org/septs/) — Robison and Robson are among the 29 names
+  recognized by the Chief and Council, the Rob- septs tracing to Robert, son of the Crowner — and
+  [Clanscape's Clan Gunn history](https://clanscape.scot/blogs/clans/history-of-clan-gunn)
+  (Norse origins, the Crowner, St Tayre, the Robson Gunns of Braemore). Both are sept/affiliation
+  evidence, not descent evidence — the Y-DNA comparison against the Clan Gunn project remains the
+  decisive test.
 * **Annie's parents** — a Falconer father and a Campbell mother, from Scotland 1850s/60s; names unknown.
 * **Spencer and Eva Lewis** — full dates and Eva's maiden name; the Boundary County, Idaho censuses
   (1910/20/30) would give the household.

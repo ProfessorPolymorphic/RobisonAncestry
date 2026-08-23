@@ -126,3 +126,10 @@
   name: Ottawa, Ontario
   lat: 45.42
   lon: -75.70
+- id: british-columbia
+  name: British Columbia
+  note: Province-level place for records that give no town.
+- id: salmon-arm-bc
+  name: Salmon Arm, British Columbia
+  lat: 50.70
+  lon: -119.28

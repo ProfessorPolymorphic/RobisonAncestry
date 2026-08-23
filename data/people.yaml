@@ -41,7 +41,11 @@
     death registrations and four spellings for a Robison born before 1793 in the Bay of Quinte area
     and found nothing — consistent with a man who died in 1842, before the first nominal census
     (1851). A Tyrone (Irish, Presbyterian) origin suggests Ulster-Scots background but does not by
-    itself support the Clan Gunn (Caithness) tradition — see README "Open questions".
+    itself support the Clan Gunn (Caithness) tradition — see README "Open questions". On that
+    tradition: Robison and Robson are on the sept list recognized by the Chief and Clan Council
+    (sources cgsna, clan-gunn), the Rob- septs tracing to Robert, son of George Gunn the Crowner of
+    Caithness, whose line held Braemore (source clanscape-gunn). Paul Robison's 1994 arms carry
+    Gunn elements and the Gunn motto. Sept affiliation is by surname, not proved descent.
   todo:
     - Upper Canada Land Petitions (LAC RG 1 L3, "R" bundles) — would confirm origin and the Stinson's Block purchase.
     - Hillier cemetery / family-plot transcriptions for a stone d. 1842.
@@ -506,15 +510,26 @@
     - {type: occupation, date: bet 1943 and 1986, sources: [obit-bert-2013], note: "Canadian Pacific Railway: telegrapher as a teenager, 43 years, retired 1986 as customer-service supervisor."}
     - {type: residence, date: 1976, place: revelstoke-bc, sources: [jean-memorial-card-1976], note: "'H.S. (Bert) of Revelstoke' in his mother's memorial card."}
     - {type: residence, date: bet 2003 and 2013, place: golden-bc, sources: [obit-bert-2013], note: "Last ten years in Golden."}
-    - {type: death, date: 2013-08-25, place: golden-bc, sources: [obit-bert-2013], note: "Aged 85."}
+    - {type: death, date: 2013-08-25, place: golden-bc, sources: [bc-death-cert-bert-2013, obit-bert-2013],
+       note: "Aged 85. BC certificate (registration no. 2013-59-021203): born 'Manitoba, Canada', resident Golden."}
   notes: '"Bert Robison", named as brother in Bill''s 2011 obituary. The typed chart almost certainly comes from his branch.'
   todo:
     - Manitoba birth registration (1928) — would name his parents and give Jean's maiden name.
 - id: elsie-b-storgaard-1928
-  names: [{given: Elsie B., surname: Storgaard, sources: [typed-chart]}]
+  names:
+    - {given: Elsie Betty, surname: Storgaard, sources: [bc-death-cert-elsie-2013, typed-chart],
+       note: "Maiden name Storgaard from the chart; 'Elsie Betty Robison' on her death certificate resolves the chart's 'Elsie B.'"}
+    - {given: Elsie B., surname: Storgaard, kind: variant, sources: [typed-chart]}
   sex: F
   events:
-    - {type: birth, date: 1928-11-18, sources: [typed-chart]}
+    - {type: birth, date: 1928-11-18, place: british-columbia, sources: [typed-chart, bc-death-cert-elsie-2013],
+       note: "Certificate gives birthplace 'British Columbia, Canada' and age 84 at death — consistent with 18 Nov 1928."}
+    - {type: death, date: 2013-10-24, place: golden-bc, sources: [bc-death-cert-elsie-2013, elsie-cremation-2013],
+       note: "Aged 84, two months after Bert. Registration no. 2013-59-026602."}
+    - {type: burial, date: 2013-10-28, place: salmon-arm-bc, sources: [elsie-cremation-2013],
+       note: "Cremated at the Salmon Arm Crematorium (authorization C2013-6475); funeral director Hindman/Bowers."}
+  todo:
+    - Where in BC was she born (18 Nov 1928)? BC birth registration would also give her Storgaard parents.
 
 - id: william-james-robison-1938
   names:
