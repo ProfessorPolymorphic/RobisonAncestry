@@ -9,14 +9,27 @@ from .model import Family, Person, Tree
 
 ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII"]
 
-BOX_MIN, BOX_MAX = 112, 330
-CHAR_W = 7.4          # approx px per character at 12px monospace
-LINE_H = 15
-PAD = 9
-HGAP = 14
-VGAP = 60
+BOX_MIN, BOX_MAX = 120, 340
+CHAR_W = 7.9          # approx px per character at 12.5px monospace
+LINE_H = 17
+PAD = 10
+HGAP = 16
+VGAP = 64
 FONT = "ui-monospace, Menlo, Consolas, monospace"
 LABEL_W = 48
+
+# Clan Gunn ink on parchment
+C_PAPER = "#f7f5ee"
+C_BAND = "#efecdf"
+C_BOX = "#fffdf7"
+C_BOX_STROKE = "#8b948a"
+C_PINE = "#1e4938"
+C_RED = "#a4403a"
+C_GREY = "#9aa196"
+C_INK = "#1c2b24"
+C_FACT = "#39443c"
+C_SPOUSE = "#5a655c"
+C_MUTED = "#6d7568"
 
 
 def esc(s: str) -> str:
@@ -187,25 +200,29 @@ class ChartBuilder:
             heavy = tree.ancestors(focus) | {focus.id}
 
         out = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{total_w:.0f}" height="{total_h:.0f}" '
-               f'viewBox="0 0 {total_w:.0f} {total_h:.0f}" font-family="{FONT}" font-size="12">',
+               f'viewBox="0 0 {total_w:.0f} {total_h:.0f}" font-family="{FONT}" font-size="12.5">',
                '<style>'
-               '.box{fill:#fff;stroke:#777;stroke-width:1}'
-               '.box.heavy{stroke:#111;stroke-width:2.2}'
-               '.box.unverified{stroke-dasharray:5 4}'
-               '.name{font-weight:700;font-size:13px;fill:#111}'
-               '.fact{fill:#222}.spouse{fill:#555}'
-               '.edge{fill:none;stroke:#111;stroke-width:1.2}'
-               '.edge.stated{stroke:#999}'
-               '.edge.unverified{stroke:#999;stroke-dasharray:5 4}'
-               '.gen{fill:#888;font-size:13px}'
-               '.title{font-weight:700;font-size:20px;fill:#111;font-family:Georgia,serif}'
-               '.legend{fill:#777;font-size:11px}'
+               f'.box{{fill:{C_BOX};stroke:{C_BOX_STROKE};stroke-width:1}}'
+               f'.box.heavy{{stroke:{C_PINE};stroke-width:2.6}}'
+               f'.box.unverified{{stroke:{C_RED};stroke-dasharray:5 4}}'
+               f'.name{{font-weight:700;font-size:14px;fill:{C_INK}}}'
+               f'.fact{{fill:{C_FACT}}}.spouse{{fill:{C_SPOUSE}}}'
+               f'.edge{{fill:none;stroke:{C_PINE};stroke-width:1.4}}'
+               f'.edge.stated{{stroke:{C_GREY}}}'
+               f'.edge.unverified{{stroke:{C_RED};stroke-dasharray:5 4}}'
+               f'.gen{{fill:{C_RED};font-size:15px;font-weight:700;font-family:Georgia,serif}}'
+               f'.title{{font-weight:700;font-size:22px;fill:{C_PINE};font-family:Georgia,serif}}'
+               f'.legend{{fill:{C_MUTED};font-size:11.5px}}'
                '</style>',
-               '<rect width="100%" height="100%" fill="#fff"/>']
+               f'<rect width="100%" height="100%" fill="{C_PAPER}"/>']
+        for i, d in enumerate(sorted(heights)):
+            if i % 2 == 1:
+                out.append(f'<rect x="0" y="{y_of[d] - 16:.0f}" width="{total_w:.0f}" '
+                           f'height="{heights[d] + 32}" fill="{C_BAND}"/>')
         if title:
-            out.append(f'<text class="title" x="{LABEL_W + 10}" y="34">{esc(title)}</text>')
+            out.append(f'<text class="title" x="{LABEL_W + 10}" y="36">{esc(title)}</text>')
         for d in sorted(heights):
-            out.append(f'<text class="gen" x="14" y="{y_of[d] + 16:.0f}">{ROMAN[d] if d < len(ROMAN) else d + 1}</text>')
+            out.append(f'<text class="gen" x="14" y="{y_of[d] + 18:.0f}">{ROMAN[d] if d < len(ROMAN) else d + 1}</text>')
 
         stack = [node]
         while stack:
@@ -278,18 +295,19 @@ def html_page(tree: Tree, svg: str, title: str) -> str:
     return f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><title>{esc(title)}</title>
 <style>
- body{{margin:0;padding:24px;font:15px/1.45 Georgia,serif;color:#222;background:#fafaf8}}
- h1{{font-size:26px;margin:0 0 4px}} h2{{font-size:19px;margin:36px 0 10px;border-bottom:1px solid #ccc;padding-bottom:4px}}
- .sub{{color:#666;margin:0 0 18px}}
- .chart{{overflow-x:auto;border:1px solid #ddd;background:#fff;padding:8px}}
+ body{{margin:0;padding:24px;font:15px/1.5 Georgia,serif;color:#1c2b24;background:#f7f5ee}}
+ h1{{font-size:26px;margin:0 0 4px;color:#1e4938}} h2{{font-size:19px;margin:36px 0 10px;border-bottom:1px solid #cfccbe;padding-bottom:4px;color:#1e4938}}
+ .sub{{color:#6d7568;margin:0 0 18px}}
+ .chart{{overflow-x:auto;border:1px solid #cfccbe;background:#fffdf7;padding:8px}}
  .chart.fit svg{{max-width:100%;height:auto}}
- .toggle{{font-size:13px;color:#555;margin:0 0 8px}}
- table{{border-collapse:collapse;width:100%;font-size:13.5px;background:#fff}}
- th,td{{text-align:left;vertical-align:top;padding:5px 8px;border-bottom:1px solid #e4e4e4}}
- th{{background:#f0efe9;font-weight:600}}
- code{{font:12px ui-monospace,Menlo,monospace;color:#444}}
- small{{color:#777}}
- .c-documented{{color:#1a6b2a}} .c-inferred{{color:#7a5d00}} .c-stated{{color:#888}} .c-unverified{{color:#b03030}}
+ .toggle{{font-size:13px;color:#5a655c;margin:0 0 8px}}
+ table{{border-collapse:collapse;width:100%;font-size:13.5px;background:#fffdf7}}
+ th,td{{text-align:left;vertical-align:top;padding:5px 8px;border-bottom:1px solid #e6e3d6}}
+ th{{background:#edeadd;font-weight:600}}
+ code{{font:12px ui-monospace,Menlo,monospace;color:#39443c}}
+ small{{color:#6d7568}}
+ a{{color:#1e4938}}
+ .c-documented{{color:#1e4938}} .c-inferred{{color:#7a5d00}} .c-stated{{color:#7d857a}} .c-unverified{{color:#a4403a}}
  nav a{{margin-right:14px}}
  @media print{{.chart{{overflow:visible;border:0}} nav{{display:none}}}}
 </style></head><body>

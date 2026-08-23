@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import shutil
 from pathlib import Path
 
 from .gedcom import export as gedcom_export
@@ -16,7 +17,7 @@ def _event(tree: Tree, e):
             "note": e.note, "preferred": e.preferred}
 
 
-def data_json(tree: Tree, private: bool = False) -> dict:
+def data_json(tree: Tree, private: bool = False, focus: str | None = None) -> dict:
     people = {}
     for p in tree.people.values():
         living = p.is_living()
@@ -73,7 +74,7 @@ def data_json(tree: Tree, private: bool = False) -> dict:
                  for c in tree.conflicts()]
     todo = [{"who": pid, "kind": kind, "text": text} for pid, kind, text in tree.todo()]
     return {"people": people, "families": families, "sources": sources, "places": places,
-            "conflicts": conflicts, "todo": todo, "root": tree.default_root().id,
+            "conflicts": conflicts, "todo": todo, "root": tree.default_root().id, "focus": focus,
             "stats": {"people": len(people), "families": len(families), "sources": len(sources)}}
 
 
@@ -82,7 +83,10 @@ def build_site(tree: Tree, out: Path, focus=None, title="The Robison Family", pr
     root = tree.default_root()
     builder = ChartBuilder(tree, private=private)
     svg = builder.svg(root, focus, title="")
-    data = data_json(tree, private)
+    data = data_json(tree, private, focus=focus.id if focus else None)
+    scan = Path(__file__).resolve().parent.parent / "scans" / "typed-chart-web.jpg"
+    if scan.exists():
+        shutil.copyfile(scan, out / "typed-chart.jpg")
     (out / "data.json").write_text(json.dumps(data, ensure_ascii=False, indent=1, default=str), encoding="utf-8")
     (out / "robison-tree.svg").write_text(builder.svg(root, focus, title=title), encoding="utf-8")
     (out / "robison.ged").write_text(gedcom_export(tree), encoding="utf-8")
