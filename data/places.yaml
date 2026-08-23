@@ -72,3 +72,7 @@
   name: Field, British Columbia
   lat: 51.40
   lon: -116.49
+- id: pullman-wa
+  name: Pullman, Washington, USA
+  lat: 46.73
+  lon: -117.18
