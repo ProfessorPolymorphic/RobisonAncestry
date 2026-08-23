@@ -1,0 +1,515 @@
+# People — one entry per person. See README.md for the full schema.
+#
+#   id        stable slug (opaque — never "fix" it when a date changes; other files reference it)
+#   names     list; FIRST entry is the preferred name. kind: variant (same name, other spelling/
+#             indexing) | conflict (a source asserts a genuinely different name) | nickname
+#   sex       M | F | (omit if unknown)
+#   living    true/false. If omitted: treated as living when there is no death event and the
+#             person was born within the last 100 years.
+#   events    list of {type, date, place, sources, note, preferred}. Several events of the same
+#             type are allowed — that is how conflicting claims are kept. The first one (or the one
+#             marked preferred: true) is what charts show; `tree.py conflicts` lists the rest.
+#             date grammar: 1869 | 1869-03 | 1869-03-19 | abt 1802 | bef 1851 | aft 1871 | bet 1802 and 1804
+#   notes     free text (markdown)
+#   todo      list of open questions for this person
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Generation 0 — the immigrant (typed chart only)
+# ─────────────────────────────────────────────────────────────────────────────
+
+- id: hugh-robison-1766
+  names:
+    - {given: Hugh, surname: Robison, sources: [typed-chart]}
+  sex: M
+  events:
+    - {type: birth, date: 1766, place: county-tyrone, sources: [pioneer-life-1904, typed-chart],
+       note: "Chart gives the year only; County Tyrone is in the chart header and the 1904 county history."}
+    - {type: immigration, date: abt 1792, place: new-brunswick, sources: [pioneer-life-1904, typed-chart],
+       note: "To New Brunswick with Rebecca and infant son Hugh. Chart header says only 'arriving Canada about 1792'."}
+    - {type: residence, date: abt 1806, place: hillier, sources: [pioneer-life-1904],
+       note: "After ~14 years in New Brunswick, to Hillier Township c.1806–07; bought ~200 acres at Stinson's Block, later 'Robison's Point'. Presbyterian."}
+    - {type: death, date: 1842, place: hillier, sources: [typed-chart, pioneer-life-1904],
+       note: "1904 history: died aged 76 (= 1842), buried on the old family property."}
+  notes: >
+    Known from the typed chart and the 1904 county history "Pioneer Life on the Bay of Quinte"
+    (the chart may derive from it). The 2026 report searched three censuses, sixty years of Ontario
+    death registrations and four spellings for a Robison born before 1793 in the Bay of Quinte area
+    and found nothing — consistent with a man who died in 1842, before the first nominal census
+    (1851). A Tyrone (Irish, Presbyterian) origin suggests Ulster-Scots background but does not by
+    itself support the Clan Gunn (Caithness) tradition — see README "Open questions".
+  todo:
+    - Upper Canada Land Petitions (LAC RG 1 L3, "R" bundles) — would confirm origin and the Stinson's Block purchase.
+    - Hillier cemetery / family-plot transcriptions for a stone d. 1842.
+    - County Tyrone church, land or estate records for Hugh Robison and the Dougalls.
+
+- id: rebecca-dougall-1766
+  names:
+    - {given: Rebecca, surname: Dougall, sources: [typed-chart, pioneer-life-1904]}
+  sex: F
+  events:
+    - {type: birth, date: 1766, place: county-tyrone, sources: [typed-chart, pioneer-life-1904]}
+    - {type: death, date: 1852, sources: [typed-chart]}
+  notes: Daughter of Dr. William Dougall, a physician in County Tyrone who later followed the family to Prince Edward County and practised in Picton.
+
+- id: william-dougall
+  names:
+    - {given: William, surname: Dougall, sources: [pioneer-life-1904]}
+  sex: M
+  living: false
+  events:
+    - {type: occupation, place: county-tyrone, sources: [pioneer-life-1904], note: "Physician. Later came to Prince Edward County and practised medicine in Picton."}
+    - {type: residence, place: picton, sources: [pioneer-life-1904]}
+
+# Children of Hugh & Rebecca (chart order; names only, except Samuel)
+- id: hugh-robison-ii
+  names: [{given: Hugh, surname: Robison, sources: [typed-chart, pioneer-life-1904]}]
+  sex: M
+  living: false
+  events:
+    - {type: birth, date: bef 1792, place: county-tyrone, sources: [pioneer-life-1904], note: "The infant first son brought to New Brunswick c.1792."}
+- id: john-robison
+  names: [{given: John, surname: Robison, sources: [typed-chart]}]
+  sex: M
+  living: false
+- id: nancy-robison
+  names: [{given: Nancy, surname: Robison, sources: [typed-chart]}]
+  sex: F
+  living: false
+- id: rebecca-robison
+  names: [{given: Rebecca, surname: Robison, sources: [typed-chart]}]
+  sex: F
+  living: false
+- id: william-robison-1801
+  names:
+    - {given: William, surname: Robison, sources: [typed-chart]}
+    - {given: William, surname: Robeson, kind: variant, sources: [census-1851], note: Indexed as Robeson.}
+  sex: M
+  living: false
+  events:
+    - {type: birth, date: abt 1801, place: upper-canada, sources: [census-1851, census-1861]}
+    - {type: residence, date: 1851, place: prince-edward-co, sources: [census-1851],
+       note: Farmed the land adjoining Samuel; enumerated a few lines away in 1851 and 1861.}
+  notes: >
+    The report found "a second William Robison, born about 1801" farming next to Samuel and called
+    him "almost certainly Samuel's brother, though no document says so". The typed chart
+    independently lists a William among Hugh's children — good corroboration that the chart's
+    generation 0 is real. Identification of the chart's William with the census William is an
+    inference.
+- id: elizabeth-robison
+  names: [{given: Elizabeth, surname: Robison, sources: [typed-chart]}]
+  sex: F
+  living: false
+- id: jane-robison
+  names: [{given: Jane, surname: Robison, sources: [typed-chart]}]
+  sex: F
+  living: false
+- id: eleanor-robison
+  names: [{given: Eleanor, surname: Robison, sources: [typed-chart]}]
+  sex: F
+  living: false
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Generation I — Samuel
+# ─────────────────────────────────────────────────────────────────────────────
+
+- id: samuel-robison-1802
+  names:
+    - {given: Samuel J., surname: Robison, sources: [typed-chart, census-1851]}
+    - {given: Samual J., surname: Robison, kind: variant, sources: [typed-chart], note: Chart spelling.}
+  sex: M
+  events:
+    - {type: birth, date: abt 1802, place: upper-canada, sources: [census-1851, census-1861, census-1871],
+       note: "Three censuses give birthplace 'Canada' and ages consistent with c.1802–1804. NB: the 1904 history has the family in New Brunswick until c.1806, which would make Samuel NB-born — 'Canada' in the census may be loose."}
+    - {type: birth, date: 1805, sources: [typed-chart]}
+    - {type: residence, date: 1851, place: prince-edward-co, sources: [census-1851], note: Farmer.}
+    - {type: death, date: 1875, place: prince-edward-co, sources: [on-deaths]}
+  notes: >
+    The earliest Robison the records will give up. Enumerated in Prince Edward County in 1851, 1861
+    and 1871. Indexed inconsistently: Samuel as Robison, his wife and children as Robinson, his
+    probable brother as Robeson — on the same page.
+  todo:
+    - Prince Edward County surrogate wills (Archives of Ontario) — he died in 1875 leaving land.
+    - 1842 Census of Canada West.
+    - Birthplace — New Brunswick (per 1904 migration dates) or Upper Canada (per census)?
+
+- id: jane-robison-1812
+  names:
+    - {given: Jane, surname: Arthur, sources: [pioneer-life-1904, typed-chart],
+       note: "Both the 1904 county history and the typed chart give Arthur."}
+    - {given: Jane, surname: Buchanan, kind: conflict, sources: [census-1851],
+       note: "The 2026 report's inference: alternate reading in the 1851 index plus a lone James Buchanan (~25) in the household. Genuinely different surname — unresolved; the Buchanan could be a farmhand or an in-law of someone else."}
+  sex: F
+  events:
+    - {type: birth, date: abt 1812, place: canada, sources: [census-1851]}
+    - {type: death, date: aft 1871, sources: [census-1871], note: Living at the 1871 census.}
+  todo:
+    - Buchanan or Arthur? Marriage record (c.1833) or Jane's death registration would settle it. Could also be two wives.
+
+# Children of Samuel & Jane (chart order; years from the 1851/1861 censuses via the report)
+- id: eliza-robison-1835
+  names:
+    - {given: Eliza A., surname: Robison, sources: [census-1851]}
+    - {given: Eliza E., surname: Robison, kind: conflict, sources: [typed-chart], note: Middle initial differs.}
+  sex: F
+  living: false
+  events:
+    - {type: birth, date: abt 1835, place: prince-edward-co, sources: [census-1851]}
+- id: sarah-a-robison-1836
+  names: [{given: Sarah A., surname: Robison, sources: [census-1851, typed-chart]}]
+  sex: F
+  living: false
+  events:
+    - {type: birth, date: abt 1836, place: prince-edward-co, sources: [census-1851]}
+  notes: Gone from the household by 1861 (married, died or working away).
+- id: william-a-robison-1839
+  names:
+    - {given: William A., surname: Robison, sources: [typed-chart, on-marriages]}
+    - {given: William, surname: Robinson, kind: variant, sources: [census-1851], note: Indexed as Robinson with his mother and siblings.}
+  sex: M
+  events:
+    - {type: birth, date: 1839-11-07, place: prince-edward-co, sources: [typed-chart]}
+    - {type: birth, date: abt 1838, place: prince-edward-co, sources: [census-1851, census-1861],
+       note: Report gives c.1838–1840 from census ages; compatible with the chart's exact date.}
+    - {type: residence, date: 1871, place: prince-edward-co, sources: [census-1871]}
+    - {type: residence, place: consecon, sources: [pioneer-life-1904], note: "'William A. of Consecon' in the 1904 history."}
+    - {type: death, date: 1916-11-13, sources: [typed-chart]}
+  notes: >
+    Married Mary Barringer in 1865 — the marriage that explains the middle name carried for the
+    next 140 years (Mary Barringer → Herbert Barringer Robison). The report did not find his death.
+  todo:
+    - Ontario death registration, Nov 1916 — would confirm parents and the chart's date.
+- id: george-robison-1841
+  names: [{given: George, surname: Robison, sources: [census-1851, typed-chart]}]
+  sex: M
+  living: false
+  events:
+    - {type: birth, date: abt 1841, place: prince-edward-co, sources: [census-1851]}
+- id: matthew-robison-1843
+  names: [{given: Matthew, surname: Robison, sources: [census-1851, typed-chart]}]
+  sex: M
+  living: false
+  events:
+    - {type: birth, date: abt 1843, place: prince-edward-co, sources: [census-1851]}
+- id: samuel-j-robison-ii
+  names: [{given: Samuel J., surname: Robison, sources: [typed-chart]}]
+  sex: M
+  living: false
+  notes: >
+    Listed on the typed chart between Matthew and Nancy J. The report's list of children from the
+    1851 and 1861 enumerations does not include a second Samuel — he may have been born between
+    censuses and died young, or the chart may be in error.
+  todo:
+    - Check 1861 census household and Prince Edward County cemetery transcriptions for a Samuel J. b. c.1844–1847.
+- id: nancy-j-robison-1848
+  names: [{given: Nancy J., surname: Robison, sources: [census-1851, typed-chart]}]
+  sex: F
+  living: false
+  events:
+    - {type: birth, date: abt 1848, place: prince-edward-co, sources: [census-1851]}
+- id: margaret-v-robison-1852
+  names: [{given: Margaret V., surname: Robison, sources: [census-1861, typed-chart]}]
+  sex: F
+  living: false
+  events:
+    - {type: birth, date: abt 1852, place: prince-edward-co, sources: [census-1861]}
+
+# ─────────────────────────────────────────────────────────────────────────────
+# The Barringers (Mary's parents)
+# ─────────────────────────────────────────────────────────────────────────────
+
+- id: walter-l-barringer-1811
+  names: [{given: Walter L., surname: Barringer, sources: [census-1861]}]
+  sex: M
+  events:
+    - {type: birth, date: abt 1811, sources: [census-1861]}
+    - {type: residence, date: 1861, place: prince-edward-co, sources: [census-1861], note: "Farmer and landowner, agricultural schedule alongside the Robisons."}
+    - {type: death, date: 1878, place: prince-edward-co, sources: [on-deaths]}
+- id: nancy-m-barringer-1818
+  names: [{given: Nancy M., surname: null, sources: [census-1861], note: Maiden name unknown; Barringer by marriage.}]
+  sex: F
+  living: false
+  events:
+    - {type: birth, date: abt 1818, sources: [census-1861]}
+
+- id: mary-e-barringer-1844
+  names:
+    - {given: Mary E., surname: Barringer, sources: [typed-chart, census-1871]}
+    - {given: Mary, surname: Berringer, kind: variant, sources: [on-marriages], note: Spelling in the marriage register.}
+  sex: F
+  events:
+    - {type: birth, date: 1844-03-11, sources: [typed-chart]}
+    - {type: birth, date: abt 1843, place: prince-edward-co, sources: [census-1861, census-1871]}
+    - {type: death, date: 1923-08-25, sources: [typed-chart]}
+  notes: The source of the name Barringer. Daughter of Walter L. and Nancy M. Barringer.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Generation III — Herbert Edward and siblings (children of William A. & Mary)
+# ─────────────────────────────────────────────────────────────────────────────
+
+- id: walter-robison-1866
+  names: [{given: Walter, surname: Robison, sources: [typed-chart]}]
+  sex: M
+  events:
+    - {type: birth, date: 1866-04-06, sources: [typed-chart]}
+    - {type: death, date: 1868-09-21, sources: [typed-chart], note: Aged 2.}
+- id: herbert-edward-robison-1869
+  names:
+    - {given: Herbert Edward, surname: Robison, sources: [mb-vitals]}
+    - {given: Herbert E., surname: Robison, kind: variant, sources: [typed-chart]}
+  sex: M
+  events:
+    - {type: birth, date: 1869-03-19, place: consecon, sources: [mhs-robison-he, mb-vitals, census-1871],
+       note: "Born three months before Ontario began registering births (July 1869), so no birth certificate exists. Aged 2 in the 1871 census."}
+    - {type: birth, date: 1868-03-19, sources: [typed-chart], note: "Same day and month, one year earlier."}
+    - {type: occupation, sources: [mhs-robison-he], note: "Taught school, then studied law."}
+    - {type: residence, date: 1899, place: carman-mb, sources: [mhs-robison-he], note: "Moved to Carman 1899 as a lawyer; all five children born there. The 1904 history calls him 'a prominent lawyer in Carman'."}
+    - {type: residence, date: 1911, place: macdonald-mb, sources: [census-1911]}
+    - {type: occupation, date: bet 1911 and 1913, place: carman-mb, sources: [mhs-robison-he], note: "Mayor of Carman. Appointed King's Counsel 1914."}
+    - {type: death, date: 1933-07-18, place: carman-mb, sources: [mhs-robison-he, mb-vitals, typed-chart], note: "Aged 64; thirteen days after his wife."}
+    - {type: burial, place: carman-mb, sources: [robison-line-report], note: Buried together with Annie at Carman.}
+  notes: The generation that left Ontario for the prairies. Subject of a Manitoba Historical Society "Memorable Manitobans" entry.
+- id: albert-robison-1872
+  names: [{given: Albert, surname: Robison, sources: [typed-chart]}]
+  sex: M
+  events:
+    - {type: birth, date: 1872-07-29, sources: [typed-chart]}
+    - {type: death, date: 1877-08-03, sources: [typed-chart], note: Aged 5.}
+- id: nancy-jane-robison-1877
+  names: [{given: Nancy Jane, surname: Robison, sources: [typed-chart]}]
+  sex: F
+  events:
+    - {type: birth, date: 1877-05-22, sources: [typed-chart]}
+    - {type: death, date: 1961-11-26, sources: [typed-chart]}
+- id: earle-raymond-robison-1889
+  names: [{given: Earle Raymond, surname: Robison, sources: [typed-chart]}]
+  sex: M
+  living: false
+  events:
+    - {type: birth, date: 1889-12-05, sources: [typed-chart]}
+  notes: Chart leaves his death blank.
+
+- id: annie-falconer-1880
+  names:
+    - {given: Anna, surname: Falconer, nickname: Annie, sources: [mb-vitals]}
+    - {given: Annie, surname: Falconer, kind: variant, sources: [typed-chart]}
+  sex: F
+  events:
+    - {type: birth, date: 1880-12-31, sources: [mb-vitals], note: "Chart leaves her birth blank."}
+    - {type: birth, date: 1882, sources: [mhs-robison-he], note: "MHS gives 1882–1933."}
+    - {type: death, date: 1933-07-05, place: winnipeg, sources: [mb-vitals, typed-chart], note: Aged 52.}
+    - {type: burial, place: carman-mb, sources: [robison-line-report]}
+  notes: Her maiden name became the middle name of her son William Falconer Robison.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Generation IV — children of Herbert Edward & Annie (all born Carman, Manitoba)
+# ─────────────────────────────────────────────────────────────────────────────
+
+- id: ivan-campbell-robison-1901
+  names:
+    - {given: Ivan Campbell, surname: Robison, sources: [mb-vitals]}
+    - {given: Ivan C., surname: Robison, kind: variant, sources: [typed-chart]}
+  sex: M
+  events:
+    - {type: birth, date: 1901-08-12, place: carman-mb, sources: [mb-vitals, typed-chart]}
+    - {type: death, date: 1989-06-22, sources: [mb-vitals]}
+- id: corinne-saint-louis
+  names: [{given: Corinne, surname: Saint Louis, sources: [mb-vitals]}]
+  sex: F
+  living: false
+- id: william-james-robison-1902
+  names:
+    - {given: William James, surname: Robison, sources: [mb-vitals]}
+    - {given: William J., surname: Robison, kind: variant, sources: [typed-chart]}
+  sex: M
+  events:
+    - {type: birth, date: 1902-08-31, place: carman-mb, sources: [mb-vitals, typed-chart]}
+    - {type: death, date: 1905-06-21, sources: [mb-vitals], note: Aged 2. Chart gives "Jun 1905".}
+  notes: His nephew Bill (b. 1938) was named for him.
+- id: herbert-barringer-robison-1904
+  names:
+    - {given: Herbert Barringer, surname: Robison, nickname: Barrie, sources: [mb-vitals, nakusp-cemetery]}
+    - {given: Herbert B., surname: Robison, kind: variant, sources: [typed-chart]}
+    - {given: Herbert Beringer, surname: Robison, kind: variant, sources: [bc-deaths],
+       note: "Transcription error in the BC death index — matches no family, place or record; every search built on it failed."}
+    - {given: Burre, surname: Robison, kind: variant, sources: [census-1911], note: Garbled indexing.}
+    - {given: Herbert B, surname: Robinson, kind: variant, sources: [census-1916]}
+  sex: M
+  events:
+    - {type: birth, date: 1904-01-19, place: carman-mb, sources: [mb-vitals, typed-chart]}
+    - {type: immigration, place: eastport-id, sources: [border-crossing],
+       note: "US border crossing at Eastport, Idaho (the Kingsgate crossing into the West Kootenay), birthplace given as Carman, Manitoba. Date not yet captured. The record that ties the Manitoba family to BC."}
+    - {type: residence, date: bet 1930 and 1938, place: field-bc, sources: [obit-bert-2013], note: "Inferred: son Bert 'grew up mainly in Field'. Possibly a CPR employee — Bert joined CP Rail as a teenager."}
+    - {type: residence, date: 1938, place: golden-bc, sources: [obit-bill-2011]}
+    - {type: residence, date: 1955, place: nakusp, sources: [nakusp-library]}
+    - {type: death, date: 1965-05-12, place: nakusp, sources: [typed-chart, bc-deaths], note: BC death index gives the year only.}
+    - {type: burial, place: nakusp-cemetery, sources: [nakusp-cemetery], note: 'Plot W 190, stone reads "ROBISON H. Barrie 1904 1965". The only Robison in the cemetery.'}
+  notes: >
+    The man who brought the name to British Columbia. Middle name Barringer is his grandmother's
+    maiden name; "Barrie" is simply what he was called, and what his grandson was named.
+  todo:
+    - Order BC death registration (1965) — confirms parents.
+    - Border-crossing record — capture date and record number.
+    - 1965 Arrow Lakes News death notice (ALHS).
+    - Manitoba marriage registration for Herbert B. Robison and Jean, c.1925–1928 — the single most decisive next document.
+    - Did he work for the CPR (Field / Golden)? CP Rail personnel or pension records.
+- id: nora-kathleen-robison-1905
+  names:
+    - {given: Nora Kathleen, surname: Robison, sources: [mb-vitals]}
+    - {given: Nora K., surname: Robison, kind: variant, sources: [typed-chart]}
+    - {given: Norah Kathleen, surname: Robison, kind: variant, sources: [mhs-robison-he]}
+  sex: F
+  events:
+    - {type: birth, date: 1905-09-26, place: carman-mb, sources: [mb-vitals, typed-chart]}
+    - {type: death, date: 1916-06-14, sources: [mb-vitals, typed-chart], note: Aged 10.}
+- id: william-falconer-robison-1908
+  names:
+    - {given: William Falconer, surname: Robison, sources: [mb-vitals]}
+    - {given: William F., surname: Robison, kind: variant, sources: [typed-chart]}
+  sex: M
+  events:
+    - {type: birth, date: 1908-08-31, place: carman-mb, sources: [mb-vitals, typed-chart]}
+    - {type: death, date: 1996, sources: [robison-line-report], note: Chart leaves his death blank.}
+- id: audrey-louise-french-bossy
+  names: [{given: Audrey Louise French, surname: Bossy, sources: [robison-line-report]}]
+  sex: F
+  living: false
+
+- id: jean-lillian-lewis-1909
+  names:
+    - {given: Jean Lillian, surname: Lewis, sources: [bc-deaths, obit-bill-2011]}
+    - {given: Jean L., surname: Lewis, kind: variant, sources: [typed-chart]}
+  sex: F
+  events:
+    - {type: birth, date: 1909-08-08, sources: [typed-chart]}
+    - {type: birth, date: abt 1910, sources: [robison-line-report]}
+    - {type: occupation, date: bet 1955 and 1975, place: nakusp, sources: [nakusp-library],
+       note: Took over the Nakusp public library in January 1955 (165 borrowers) and ran it for twenty years.}
+    - {type: death, date: 1976-07-18, place: nakusp, sources: [typed-chart, bc-deaths], note: The year after she stepped down. BC index gives the year only.}
+  todo:
+    - Order BC death registration (1976) — would give maiden name from a primary source.
+    - Jean's 1976 obituary, Arrow Lakes News (ALHS).
+    - "Maiden name: chart says Lewis, but no primary record yet confirms it. 1931 census household (Herbert, Jean, Bert) would help."
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Generation V — children of Herbert Barringer & Jean
+# ─────────────────────────────────────────────────────────────────────────────
+
+- id: herbert-spencer-robison-1928
+  names:
+    - {given: Herbert Spencer, surname: Robison, nickname: Bert, sources: [typed-chart, obit-bill-2011, obit-bert-2013]}
+  sex: M
+  events:
+    - {type: birth, date: 1928-05-03, place: carman-mb, sources: [typed-chart, obit-bert-2013], note: "Obituary gives Carman; chart gives the date."}
+    - {type: residence, place: field-bc, sources: [obit-bert-2013], note: "Grew up mainly in Field, BC — so the family left Manitoba for the CPR towns between 1928 and 1938."}
+    - {type: occupation, date: bet 1943 and 1986, sources: [obit-bert-2013], note: "Canadian Pacific Railway: telegrapher as a teenager, 43 years, retired 1986 as customer-service supervisor."}
+    - {type: residence, date: bet 2003 and 2013, place: golden-bc, sources: [obit-bert-2013], note: "Last ten years in Golden."}
+    - {type: death, date: 2013-08-25, place: golden-bc, sources: [obit-bert-2013], note: "Aged 85."}
+  notes: '"Bert Robison", named as brother in Bill''s 2011 obituary. The typed chart almost certainly comes from his branch.'
+  todo:
+    - Manitoba birth registration (1928) — would name his parents and give Jean's maiden name.
+- id: elsie-b-storgaard-1928
+  names: [{given: Elsie B., surname: Storgaard, sources: [typed-chart]}]
+  sex: F
+  events:
+    - {type: birth, date: 1928-11-18, sources: [typed-chart]}
+
+- id: william-james-robison-1938
+  names:
+    - {given: William James, surname: Robison, nickname: Bill, sources: [obit-bill-2011, typed-chart]}
+  sex: M
+  events:
+    - {type: birth, date: 1938-08-01, place: golden-bc, sources: [obit-bill-2011, typed-chart]}
+    - {type: education, date: 1956, place: nakusp, sources: [alhs], note: "Nakusp High School, class of ten (ALHS 2011.004.34)."}
+    - {type: education, place: vancouver, sources: [obit-bill-2011], note: "Education degree, UBC."}
+    - {type: occupation, date: bet 1960 and 1995, place: nakusp, sources: [obit-bill-2011, valley-voice],
+       note: "Teacher, School District 10 — history, science, mathematics; later Vice-Principal, Nakusp Secondary. Taught three generations. Retired 1995, then tutored up to 35 hrs/week unpaid."}
+    - {type: death, date: 2011-05-11, sources: [obit-bill-2011], note: Aged 72. Date is that of the obituary; confirm actual date of death.}
+  notes: >
+    Director of the Arrow Lakes Historical Society, Kinsmen Club officer; played Tom Abriel in the
+    1999 Pioneer Pageant. His estate left 110 items to the ALHS. The Bill Robison Memorial Award is
+    still presented at Nakusp Secondary (June 2025).
+- id: patricia-parsons
+  names:
+    - {given: Patricia, surname: Parsons, nickname: Pat, sources: [obit-bill-2011]}
+  sex: F
+  events:
+    - {type: residence, date: 1971-04, place: nakusp, sources: [alhs], note: Kinette Club registrar (ALHS 2006.011.30.124.1).}
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Generation VI — Bert's children, Bill's children
+# ─────────────────────────────────────────────────────────────────────────────
+
+- id: herbert-colby-robison-1954
+  names: [{given: Herbert Colby, surname: Robison, sources: [typed-chart]}]
+  sex: M
+  events:
+    - {type: birth, date: 1954-05-07, sources: [typed-chart]}
+- id: lillian-kramer-1956
+  names: [{given: Lillian, surname: Kramer, sources: [typed-chart]}]
+  sex: F
+  events:
+    - {type: birth, date: 1956-02-25, sources: [typed-chart]}
+- id: nancy-lee-robison-1957
+  names: [{given: Nancy Lee, surname: Robison, sources: [typed-chart]}]
+  sex: F
+  events:
+    - {type: birth, date: 1957-03-26, sources: [typed-chart]}
+- id: blair-hakeman-1958
+  names: [{given: Blair, surname: Hakeman, sources: [typed-chart]}]
+  sex: M
+  events:
+    - {type: birth, date: 1958-11-21, sources: [typed-chart]}
+
+- id: barrie-robison-1970
+  names: [{given: Barrie, surname: Robison, sources: [obit-bill-2011, alhs]}]
+  sex: M
+  events:
+    - {type: birth, date: abt 1970, place: nakusp, sources: [alhs], note: Held as an infant by his father at the 1 July 1972 Canada Day parade (ALHS 2014.018.2628).}
+  notes: Named for his grandfather. The only archival record in Nakusp naming this generation is the 1972 parade photograph.
+  todo:
+    - Exact birth date (family knowledge).
+- id: leslie
+  names: [{given: Leslie, surname: null, sources: [robison-line-report]}]
+  todo:
+    - Surname and birth date.
+- id: zane-robison-1972
+  names: [{given: Zane, surname: Robison, sources: [obit-bill-2011, unbc-wall]}]
+  sex: M
+  events:
+    - {type: birth, date: abt 1972, place: nakusp, sources: [robison-line-report]}
+    - {type: education, date: 1990, place: nakusp, sources: [valley-voice], note: "Nakusp Secondary, class of 1990."}
+    - {type: education, date: 2000, place: prince-george-bc, sources: [valley-voice, unbc-wall], note: "BSc Forestry, UNBC. Founded and captained the men's basketball programme as player-coach."}
+    - {type: occupation, date: bet 2001 and 2008, place: prince-george-bc, sources: [unbc-wall], note: "Head coach, UNBC Timberwolves. Inducted to the Wall of Honour 2021; an annual award bears his name."}
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Generation VII
+# ─────────────────────────────────────────────────────────────────────────────
+
+- id: ryan-colby-robison-1982
+  names: [{given: Ryan Colby, surname: Robison, sources: [typed-chart]}]
+  sex: M
+  events:
+    - {type: birth, date: 1982-04-24, sources: [typed-chart]}
+- id: clayton-reese-robison-1986
+  names: [{given: Clayton Reese, surname: Robison, sources: [typed-chart]}]
+  sex: M
+  events:
+    - {type: birth, date: 1986-03-04, sources: [typed-chart]}
+- id: krista-lee-hakeman-1983
+  names: [{given: Krista Lee, surname: Hakeman, sources: [typed-chart], note: Surname assumed from father.}]
+  sex: F
+  events:
+    - {type: birth, date: 1983-11-20, sources: [typed-chart]}
+- id: jordan-ross-hakeman-1985
+  names: [{given: Jordan Ross, surname: Hakeman, sources: [typed-chart], note: Surname assumed from father.}]
+  events:
+    - {type: birth, date: 1985-01-16, sources: [typed-chart]}
+
+- id: jacob-robison
+  names: [{given: Jacob, surname: Robison, sources: [obit-bill-2011]}]
+  sex: M
+  notes: Named as a grandson in Bill's 2011 obituary.
+- id: nicholas-robison
+  names: [{given: Nicholas, surname: Robison, sources: [obit-bill-2011]}]
+  sex: M
+  notes: Named as a grandson in Bill's 2011 obituary.

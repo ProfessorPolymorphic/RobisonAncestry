@@ -1,0 +1,144 @@
+# Families — a union of (usually) two partners and the children of that union.
+#
+#   id          stable slug
+#   partners    list of person ids (1 or 2). Order doesn't matter.
+#   events      marriage / divorce etc., same shape as person events (several allowed)
+#   children    list of {person, confidence, basis, sources}, in birth order.
+#               confidence of the parent→child link:
+#                 documented  a record states the relationship (birth reg., obituary, etc.)
+#                 inferred    chain of reasoning from records (census adjacency, naming)
+#                 stated      asserted by a compiled source (the typed chart) — not yet checked  [default]
+#                 unverified  placement is a guess; needs confirmation
+#   sources     sources for the union itself (if different from the marriage event)
+#   notes
+
+- id: william-dougall
+  partners: [william-dougall]
+  sources: [pioneer-life-1904]
+  children:
+    - {person: rebecca-dougall-1766, confidence: stated, sources: [pioneer-life-1904]}
+
+- id: hugh+rebecca
+  partners: [hugh-robison-1766, rebecca-dougall-1766]
+  sources: [typed-chart, pioneer-life-1904]
+  events:
+    - {type: marriage, date: bef 1792, place: county-tyrone, sources: [pioneer-life-1904], note: "Married before leaving Ireland."}
+  children:
+    - {person: hugh-robison-ii}
+    - {person: john-robison}
+    - {person: nancy-robison}
+    - {person: rebecca-robison}
+    - {person: william-robison-1801}
+    - {person: samuel-robison-1802, confidence: stated, sources: [pioneer-life-1904, typed-chart],
+       basis: "Typed chart and the 1904 county history (which the chart may derive from). The 2026 report lists Samuel's father as 'Open' — no original record names him."}
+    - {person: elizabeth-robison}
+    - {person: jane-robison}
+    - {person: eleanor-robison}
+
+- id: samuel+jane
+  partners: [samuel-robison-1802, jane-robison-1812]
+  sources: [pioneer-life-1904, census-1851, typed-chart]
+  children:
+    - {person: eliza-robison-1835, confidence: inferred, sources: [census-1851]}
+    - {person: sarah-a-robison-1836, confidence: inferred, sources: [census-1851]}
+    - {person: william-a-robison-1839, confidence: inferred, sources: [census-1851, census-1861, pioneer-life-1904],
+       basis: "William b. c.1838 in Samuel's household in both 1851 and 1861, at consecutive record IDs; the 1904 county history names William A. as Samuel's son."}
+    - {person: george-robison-1841, confidence: inferred, sources: [census-1851]}
+    - {person: matthew-robison-1843, confidence: inferred, sources: [census-1851]}
+    - {person: samuel-j-robison-ii, confidence: stated, basis: "Typed chart only; absent from the report's census list."}
+    - {person: nancy-j-robison-1848, confidence: inferred, sources: [census-1851]}
+    - {person: margaret-v-robison-1852, confidence: inferred, sources: [census-1861]}
+
+- id: walter+nancy-barringer
+  partners: [walter-l-barringer-1811, nancy-m-barringer-1818]
+  sources: [census-1861]
+  children:
+    - {person: mary-e-barringer-1844, confidence: documented, sources: [on-marriages],
+       basis: "Marriage register names her as dau. of Walter L. and Nancy M. Barringer."}
+
+- id: william-a+mary-e
+  partners: [william-a-robison-1839, mary-e-barringer-1844]
+  events:
+    - {type: marriage, date: 1865-03-14, place: prince-edward-co, sources: [typed-chart]}
+    - {type: marriage, date: 1865, place: prince-edward-co, sources: [on-marriages], note: Register no. 897495.}
+  children:
+    - {person: walter-robison-1866}
+    - {person: herbert-edward-robison-1869, confidence: documented, sources: [mhs-robison-he, pioneer-life-1904, census-1871],
+       basis: "Manitoba Historical Society biography names him son of William A. Robison and Mary E. Barringer; the 1904 county history says William A. of Consecon's son Herbert was a lawyer in Carman. 1871 census has two-year-old Herbert with William and Mary."}
+    - {person: albert-robison-1872}
+    - {person: nancy-jane-robison-1877}
+    - {person: earle-raymond-robison-1889}
+
+- id: herbert-e+annie
+  partners: [herbert-edward-robison-1869, annie-falconer-1880]
+  events:
+    - {type: marriage, date: 1900-07-11, sources: [mhs-robison-he, typed-chart]}
+  children:
+    - {person: ivan-campbell-robison-1901, confidence: documented, sources: [mb-vitals]}
+    - {person: william-james-robison-1902, confidence: documented, sources: [mb-vitals]}
+    - {person: herbert-barringer-robison-1904, confidence: documented, sources: [mb-vitals],
+       basis: "Manitoba birth index: Herbert, 19 Jan 1904, Carman, in a coherent sibling set with parents named."}
+    - {person: nora-kathleen-robison-1905, confidence: documented, sources: [mb-vitals]}
+    - {person: william-falconer-robison-1908, confidence: documented, sources: [mb-vitals]}
+
+- id: ivan+corinne
+  partners: [ivan-campbell-robison-1901, corinne-saint-louis]
+  events:
+    - {type: marriage, date: 1929, place: winnipeg, sources: [mb-vitals]}
+
+- id: william-f+audrey
+  partners: [william-falconer-robison-1908, audrey-louise-french-bossy]
+  sources: [robison-line-report]
+
+- id: herbert-b+jean
+  partners: [herbert-barringer-robison-1904, jean-lillian-lewis-1909]
+  events:
+    - {type: marriage, date: 1927-04-12, sources: [typed-chart]}
+    - {type: marriage, date: abt 1930, sources: [robison-line-report],
+       note: "Report's estimate: 'around 1930, probably in Saskatchewan or Alberta; the marriage is in no Manitoba index.' The chart's exact date supersedes this if confirmed."}
+  children:
+    - {person: herbert-spencer-robison-1928, confidence: inferred, sources: [typed-chart, obit-bill-2011, obit-bert-2013],
+       basis: "Typed chart; Bill's obituary names 'Bert' as his brother; Bert's obituary gives birth at Carman 1928. Identification of 'H. Barrie' with Herbert Barringer (b. Carman 1904) rests on the Nakusp stone 'H. Barrie 1904–1965' matching the BC death index entry for Herbert B[a]rringer Robison, 1965, Nakusp."}
+    - {person: william-james-robison-1938, confidence: documented, sources: [obit-bill-2011],
+       basis: "Obituary: 'Bill, son of H. Barrie and Jean Robison, was born in Golden, BC on August 1st, 1938' — the only record that states this link outright."}
+
+- id: herbert-spencer+elsie
+  partners: [herbert-spencer-robison-1928, elsie-b-storgaard-1928]
+  events:
+    - {type: marriage, date: 1953-06-13, sources: [typed-chart]}
+  children:
+    - {person: herbert-colby-robison-1954}
+    - {person: nancy-lee-robison-1957}
+
+- id: herbert-colby+lillian
+  partners: [herbert-colby-robison-1954, lillian-kramer-1956]
+  events:
+    - {type: marriage, date: 1977-08-20, sources: [typed-chart]}
+  children:
+    - {person: ryan-colby-robison-1982}
+    - {person: clayton-reese-robison-1986}
+
+- id: nancy-lee+blair
+  partners: [nancy-lee-robison-1957, blair-hakeman-1958]
+  events:
+    - {type: marriage, date: 1980-04-05, sources: [typed-chart]}
+  children:
+    - {person: krista-lee-hakeman-1983}
+    - {person: jordan-ross-hakeman-1985}
+
+- id: bill+pat
+  partners: [william-james-robison-1938, patricia-parsons]
+  sources: [obit-bill-2011]
+  children:
+    - {person: barrie-robison-1970, confidence: documented, sources: [obit-bill-2011, alhs],
+       basis: "2011 obituary names Barrie as Bill's son; ALHS photo caption of 1972."}
+    - {person: zane-robison-1972, confidence: documented, sources: [obit-bill-2011]}
+
+- id: barrie+leslie
+  partners: [barrie-robison-1970, leslie]
+  sources: [robison-line-report]
+  children:
+    - {person: jacob-robison, confidence: unverified, sources: [obit-bill-2011],
+       basis: "Obituary names Jacob and Nicholas only as Bill's grandsons; it does not say which son is the father. Placed under Barrie following the report's chart — confirm."}
+    - {person: nicholas-robison, confidence: unverified, sources: [obit-bill-2011],
+       basis: "As for Jacob."}

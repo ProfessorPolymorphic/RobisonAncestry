@@ -1,0 +1,74 @@
+# Gazetteer — events reference places by id so spelling stays consistent and the
+# migration map can be drawn later. lat/lon are approximate (decimal degrees).
+
+- id: county-tyrone
+  name: County Tyrone, Ireland
+  lat: 54.6
+  lon: -7.3
+- id: canada
+  name: Canada
+- id: upper-canada
+  name: Upper Canada
+  note: Historical name for Ontario, 1791–1841 (Canada West 1841–1867).
+- id: prince-edward-co
+  name: Prince Edward County, Ontario
+  lat: 44.00
+  lon: -77.25
+  note: Upper Canada / Canada West before 1867.
+- id: consecon
+  name: Consecon, Prince Edward County, Ontario
+  lat: 44.02
+  lon: -77.52
+- id: carman-mb
+  name: Carman, Manitoba
+  lat: 49.50
+  lon: -98.00
+- id: macdonald-mb
+  name: Macdonald (Rural Municipality), Manitoba
+  lat: 49.75
+  lon: -97.65
+- id: winnipeg
+  name: Winnipeg, Manitoba
+  lat: 49.90
+  lon: -97.14
+- id: golden-bc
+  name: Golden, British Columbia
+  lat: 51.30
+  lon: -116.96
+- id: nakusp
+  name: Nakusp, British Columbia
+  lat: 50.24
+  lon: -117.80
+- id: nakusp-cemetery
+  name: Nakusp Cemetery, Women's Institute section
+  lat: 50.24
+  lon: -117.80
+- id: eastport-id
+  name: Eastport, Idaho, USA
+  lat: 48.99
+  lon: -116.18
+- id: prince-george-bc
+  name: Prince George, British Columbia (UNBC)
+  lat: 53.92
+  lon: -122.75
+- id: vancouver
+  name: Vancouver, British Columbia (UBC)
+  lat: 49.26
+  lon: -123.25
+- id: new-brunswick
+  name: New Brunswick
+  lat: 46.5
+  lon: -66.0
+- id: hillier
+  name: Hillier Township, Prince Edward County, Ontario
+  lat: 44.03
+  lon: -77.45
+  note: Hugh Robison's 200 acres at Stinson's Block, "Robison's Point".
+- id: picton
+  name: Picton, Prince Edward County, Ontario
+  lat: 44.01
+  lon: -77.14
+- id: field-bc
+  name: Field, British Columbia
+  lat: 51.40
+  lon: -116.49

@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>__TITLE__</title>
+<style>
+  :root { --ink:#1d1d1b; --muted:#6b6b66; --rule:#d9d7d0; --paper:#faf9f6; --card:#fff; --accent:#8a3b12;
+          --ok:#1a6b2a; --inf:#7a5d00; --stated:#777; --unv:#b03030; }
+  * { box-sizing:border-box }
+  body { margin:0; background:var(--paper); color:var(--ink); font:15px/1.5 Georgia,"Times New Roman",serif }
+  code, .mono { font:12.5px ui-monospace,Menlo,Consolas,monospace }
+  a { color:var(--accent) }
+  header { padding:22px 28px 0; border-bottom:1px solid var(--rule); background:var(--card) }
+  header h1 { margin:0; font-size:26px; font-weight:700 }
+  header .sub { color:var(--muted); margin:2px 0 12px }
+  nav { display:flex; gap:4px; flex-wrap:wrap }
+  nav a { padding:8px 12px; text-decoration:none; color:var(--ink); border-bottom:3px solid transparent; font-size:14.5px }
+  nav a.active { border-color:var(--accent); font-weight:700 }
+  main { padding:22px 28px 60px; max-width:1400px }
+  section { display:none } section.active { display:block }
+  h2 { font-size:21px; margin:0 0 12px }
+  h3 { font-size:16px; margin:22px 0 6px; color:var(--muted); text-transform:uppercase; letter-spacing:.04em; font-weight:600 }
+  .toolbar { display:flex; gap:14px; align-items:center; flex-wrap:wrap; margin:0 0 12px; color:var(--muted); font-size:14px }
+  input[type=search] { font:15px Georgia,serif; padding:7px 10px; border:1px solid var(--rule); border-radius:4px; width:320px; max-width:100%; background:#fff }
+  .chart { overflow:auto; border:1px solid var(--rule); background:#fff; padding:6px }
+  .chart.fit svg { max-width:100%; height:auto }
+  .chart svg g[data-id] { cursor:pointer }
+  .chart svg g[data-id]:hover rect { fill:#fff7ee }
+  table { border-collapse:collapse; width:100%; background:var(--card); font-size:14px }
+  th, td { text-align:left; vertical-align:top; padding:6px 9px; border-bottom:1px solid var(--rule) }
+  th { background:#f1efe8; font-weight:600; position:sticky; top:0 }
+  tr.row { cursor:pointer } tr.row:hover { background:#fbf6ee }
+  .c-documented { color:var(--ok) } .c-inferred { color:var(--inf) } .c-stated { color:var(--stated) } .c-unverified { color:var(--unv) }
+  .pill { display:inline-block; padding:1px 7px; border-radius:10px; font-size:12px; border:1px solid currentColor }
+  .muted { color:var(--muted) }
+  .person { display:grid; grid-template-columns: minmax(0,1fr) 300px; gap:28px }
+  @media (max-width:900px) { .person { grid-template-columns:1fr } }
+  .card { background:var(--card); border:1px solid var(--rule); border-radius:6px; padding:14px 16px; margin-bottom:14px }
+  .card h4 { margin:0 0 6px; font-size:13px; color:var(--muted); text-transform:uppercase; letter-spacing:.04em }
+  .rel a { display:block; text-decoration:none; color:var(--ink); padding:2px 0 }
+  .rel a:hover { color:var(--accent) }
+  .ev { display:grid; grid-template-columns: 105px 1fr; gap:4px 12px; padding:7px 0; border-bottom:1px dotted var(--rule) }
+  .ev:last-child { border-bottom:0 }
+  .ev .t { color:var(--muted); font-size:13px; text-transform:capitalize }
+  .src { font-size:12px; color:var(--muted) } .src a { color:var(--muted) }
+  .note { color:#444; font-size:13.5px; margin-top:2px }
+  .vitals { color:var(--muted); margin:-6px 0 14px; font-size:16px }
+  .big { font-size:28px; margin:0 }
+  .srcbox { background:#fff; border:1px solid var(--rule); border-radius:6px; padding:12px 14px; margin-bottom:10px }
+  ul.plain { padding-left:18px; margin:6px 0 }
+  .legend { font-size:13px; color:var(--muted) }
+  .legend span { margin-right:14px }
+  .conf-list { font-size:14px }
+  .wrap { white-space:pre-wrap }
+  footer { padding:16px 28px; color:var(--muted); font-size:13px; border-top:1px solid var(--rule) }
+  @media print { header nav, .toolbar, footer { display:none } section { display:block !important } .chart { overflow:visible; border:0 } }
+</style>
+</head>
+<body>
+<header>
+  <h1>__TITLE__</h1>
+  <p class="sub" id="sub"></p>
+  <nav>
+    <a href="#chart" data-tab="chart">Chart</a>
+    <a href="#people" data-tab="people">People</a>
+    <a href="#conflicts" data-tab="conflicts">Conflicts</a>
+    <a href="#todo" data-tab="todo">Open items</a>
+    <a href="#sources" data-tab="sources">Sources</a>
+    <a href="#about" data-tab="about">About</a>
+  </nav>
+</header>
+<main>
+
+<section id="tab-chart">
+  <div class="toolbar">
+    <label><input type="checkbox" id="fit" checked> fit to width</label>
+    <span>· click any box to open that person</span>
+    <span>· <a href="robison-tree.svg" download>download SVG</a> · <a href="robison.ged" download>GEDCOM</a> · <a href="data.json">data.json</a></span>
+  </div>
+  <div class="chart fit" id="chartbox">__SVG__</div>
+  <p class="legend"><span><b>Heavy box</b> = direct line to the focus person</span><span><b>Black connector</b> = documented / inferred from records</span><span><b>Grey</b> = stated by a family chart only</span><span><b>Dashed</b> = unverified placement</span></p>
+</section>
+
+<section id="tab-people">
+  <div class="toolbar">
+    <input type="search" id="q" placeholder="Search name, id, place…" autocomplete="off">
+    <label><input type="checkbox" id="onlyRobison"> Robisons only</label>
+    <span id="count" class="muted"></span>
+  </div>
+  <table><thead><tr><th>Name</th><th>Born</th><th>Died</th><th>Parents</th><th>Link</th><th>Sources</th></tr></thead><tbody id="plist"></tbody></table>
+</section>
+
+<section id="tab-person"></section>
+
+<section id="tab-conflicts">
+  <h2>Where the sources disagree</h2>
+  <p class="muted">Each row is one fact with two incompatible claims. The first is what the chart shows. Compatible differences (c.1838 vs 7 Nov 1839) are not listed.</p>
+  <table><thead><tr><th>Who</th><th>Fact</th><th>Claims [sources]</th><th>Note</th></tr></thead><tbody id="clist"></tbody></table>
+</section>
+
+<section id="tab-todo">
+  <h2>Open items</h2>
+  <p class="muted">Research questions, parent links that rest on a family chart only, and missing vitals. Edit <code>data/*.yaml</code> to resolve them.</p>
+  <div id="tlist"></div>
+</section>
+
+<section id="tab-sources">
+  <h2>Sources</h2>
+  <div id="slist"></div>
+</section>
+
+<section id="tab-about">
+  <h2>About this site</h2>
+  <p>This page is generated from four YAML files — people, families, sources, places — kept in
+  <a id="repolink" href="__REPO__">the repository</a>. Every fact cites a source. Where sources
+  disagree, both claims are kept; the first listed is shown on the chart and the rest appear under
+  <a href="#conflicts">Conflicts</a>. Each parent→child link carries a confidence level:</p>
+  <table style="max-width:760px">
+    <tr><td class="c-documented"><b>documented</b></td><td>a record states the relationship (birth registration, obituary, marriage register)</td></tr>
+    <tr><td class="c-inferred"><b>inferred</b></td><td>a chain of reasoning from records (census household adjacency, naming pattern)</td></tr>
+    <tr><td class="c-stated"><b>stated</b></td><td>asserted by a compiled source such as the typed family chart — not yet checked</td></tr>
+    <tr><td class="c-unverified"><b>unverified</b></td><td>a placement guess that needs confirmation</td></tr>
+  </table>
+  <h3>Contributing</h3>
+  <p>Edit the YAML in the repository (the web editor works fine). When a document contradicts what is
+  already recorded, <em>add a second event with its source</em> rather than overwriting. The site rebuilds
+  automatically on every change. Full conventions are in the repository README.</p>
+  <h3>Downloads</h3>
+  <p><a href="robison-tree.svg">Chart (SVG)</a> · <a href="robison.ged">GEDCOM 5.5.1</a> · <a href="data.json">data.json</a></p>
+</section>
+
+</main>
+<footer id="foot"></footer>
+
+<script id="data" type="application/json">__DATA__</script>
+<script>
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+const D = JSON.parse(document.getElementById('data').textContent);
+const P = D.people, F = D.families, S = D.sources;
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const plink = id => P[id] ? `<a href="#p/${id}">${esc(P[id].name)}</a>` : `<code>${esc(id)}</code>`;
+const srcs = ids => (ids && ids.length) ? `<span class="src">[${ids.map(s => `<a href="#s/${s}" title="${esc(S[s]?.title||s)}">${s}</a>`).join(', ')}]</span>` : '<span class="src c-unverified">[no source]</span>';
+const conf = c => c ? `<span class="c-${c}">${c}</span>` : '';
+const lifespan = p => (p.birth || p.death) ? `${p.birth || '?'} – ${p.death || (p.living ? 'living' : '?')}` : (p.living ? 'living' : '');
+
+document.getElementById('sub').textContent = `${D.stats.people} people · ${D.stats.families} families · ${D.stats.sources} sources`;
+document.getElementById('foot').textContent = `Generated from data/*.yaml by tree.py site. ` + (location.hostname.endsWith('github.io') ? 'Hosted on GitHub Pages.' : '');
+
+// ---------- routing ----------
+function route() {
+  const h = location.hash.slice(1) || 'chart';
+  let tab = h, arg = null;
+  if (h.startsWith('p/')) { tab = 'person'; arg = h.slice(2); }
+  if (h.startsWith('s/')) { tab = 'sources'; arg = h.slice(2); }
+  document.querySelectorAll('section').forEach(s => s.classList.toggle('active', s.id === 'tab-' + tab));
+  document.querySelectorAll('nav a').forEach(a => a.classList.toggle('active', a.dataset.tab === tab || (tab === 'person' && a.dataset.tab === 'people')));
+  if (tab === 'person') renderPerson(arg);
+  if (tab === 'sources' && arg) setTimeout(() => document.getElementById('src-' + arg)?.scrollIntoView({behavior:'smooth', block:'start'}), 0);
+  if (tab !== 'sources') window.scrollTo(0, 0);
+}
+window.addEventListener('hashchange', route);
+
+// ---------- chart ----------
+document.getElementById('fit').addEventListener('change', e => document.getElementById('chartbox').classList.toggle('fit', e.target.checked));
+document.querySelectorAll('#chartbox svg g[id]').forEach(g => {
+  const id = g.getAttribute('id'); if (!P[id]) return;
+  g.setAttribute('data-id', id);
+  g.addEventListener('click', () => { location.hash = 'p/' + id; });
+});
+
+// ---------- people list ----------
+const people = Object.values(P).sort((a, b) => (a.birthYear ?? 9999) - (b.birthYear ?? 9999) || a.name.localeCompare(b.name));
+function renderList() {
+  const q = document.getElementById('q').value.trim().toLowerCase();
+  const onlyR = document.getElementById('onlyRobison').checked;
+  const rows = people.filter(p => {
+    if (onlyR && p.surname !== 'Robison') return false;
+    if (!q) return true;
+    const hay = [p.id, ...p.names.map(n => n.full), ...p.events.map(e => e.placeName)].join(' ').toLowerCase();
+    return hay.includes(q);
+  });
+  document.getElementById('count').textContent = `${rows.length} of ${people.length}`;
+  document.getElementById('plist').innerHTML = rows.map(p => {
+    const ns = new Set(); p.names.forEach(n => n.sources.forEach(s => ns.add(s))); p.events.forEach(e => e.sources.forEach(s => ns.add(s)));
+    return `<tr class="row" onclick="location.hash='p/${p.id}'"><td><b>${esc(p.name)}</b><br><code class="muted">${p.id}</code></td><td>${esc(p.birth)}</td><td>${esc(p.death || (p.living ? 'living' : ''))}</td><td>${p.parents.map(id => esc(P[id].name)).join(' & ')}</td><td>${conf(p.link?.confidence)}</td><td>${ns.size}</td></tr>`;
+  }).join('');
+}
+document.getElementById('q').addEventListener('input', renderList);
+document.getElementById('onlyRobison').addEventListener('change', renderList);
+renderList();
+
+// ---------- person page ----------
+function ancestorsLine(p) {
+  const out = []; let cur = p;
+  while (cur) { out.unshift(cur); const par = cur.parents.map(id => P[id]); cur = par.find(x => x.surname === p.surname) || par[0]; if (out.length > 20) break; }
+  return out;
+}
+function renderPerson(id) {
+  const p = P[id], el = document.getElementById('tab-person');
+  if (!p) { el.innerHTML = `<p>No person <code>${esc(id)}</code>.</p>`; return; }
+  const fams = p.familiesAsPartner.map(fid => F[fid]);
+  const ev = p.events.map(e => `<div class="ev"><div class="t">${e.type}</div><div><b>${esc(e.date) || '<span class="muted">date unknown</span>'}</b>${e.placeName ? ', ' + esc(e.placeName) : ''} ${srcs(e.sources)}${e.note ? `<div class="note">${esc(e.note)}</div>` : ''}</div></div>`).join('');
+  const names = p.names.map((n, i) => `<div class="ev"><div class="t">${i === 0 ? 'name' : n.kind}</div><div>${esc(n.full)} ${srcs(n.sources)}${n.note ? `<div class="note">${esc(n.note)}</div>` : ''}</div></div>`).join('');
+  const famHtml = fams.map(f => {
+    const sp = f.partners.filter(x => x !== id);
+    const m = f.events.filter(e => e.type === 'marriage').map(e => `m. ${esc(e.date) || '?'}${e.placeName ? ', ' + esc(e.placeName) : ''} ${srcs(e.sources)}${e.note ? `<div class="note">${esc(e.note)}</div>` : ''}`).join('<br>');
+    const kids = f.children.map(c => `<li>${plink(c.person)} ${conf(c.confidence)}${c.basis ? `<div class="note">${esc(c.basis)}</div>` : ''}</li>`).join('');
+    return `<div class="card"><h4>Family <code>${f.id}</code></h4>${sp.length ? 'with ' + sp.map(plink).join(', ') : '<span class="muted">partner unknown</span>'}${m ? '<div>' + m + '</div>' : ''}${kids ? `<ul class="plain">${kids}</ul>` : ''}</div>`;
+  }).join('');
+  const line = ancestorsLine(p);
+  el.innerHTML = `
+    <p><a href="#people">← People</a></p>
+    <div class="person">
+      <div>
+        <h2 class="big">${esc(p.name)}</h2>
+        <p class="vitals">${lifespan(p)} ${p.sex ? '· ' + p.sex : ''} · <code>${p.id}</code></p>
+        ${p.notes ? `<div class="card wrap">${esc(p.notes.trim())}</div>` : ''}
+        <h3>Names</h3><div class="card">${names}</div>
+        <h3>Events</h3><div class="card">${ev || '<span class="muted">none recorded</span>'}</div>
+        ${p.link ? `<h3>Parent link</h3><div class="card">${p.parents.map(plink).join(' & ')} — ${conf(p.link.confidence)} ${srcs(p.link.sources)}${p.link.basis ? `<div class="note">${esc(p.link.basis)}</div>` : ''}</div>` : ''}
+        <h3>Families</h3>${famHtml || '<p class="muted">none recorded</p>'}
+        ${p.todo.length ? `<h3>Open questions</h3><div class="card"><ul class="plain">${p.todo.map(t => `<li>${esc(t)}</li>`).join('')}</ul></div>` : ''}
+      </div>
+      <aside>
+        <div class="card rel"><h4>Parents</h4>${p.parents.length ? p.parents.map(plink).join('') : '<span class="muted">unknown</span>'}</div>
+        <div class="card rel"><h4>Spouses</h4>${p.spouses.length ? p.spouses.map(plink).join('') : '<span class="muted">—</span>'}</div>
+        <div class="card rel"><h4>Children</h4>${p.children.length ? p.children.map(plink).join('') : '<span class="muted">—</span>'}</div>
+        <div class="card rel"><h4>Line of descent</h4>${line.map((x, i) => `<a href="#p/${x.id}">${i + 1}. ${esc(x.name)} <span class="muted">${esc(x.birth || '')}</span></a>`).join('')}</div>
+      </aside>
+    </div>`;
+}
+
+// ---------- conflicts ----------
+document.getElementById('clist').innerHTML = D.conflicts.map(c => `<tr><td>${P[c.owner] ? plink(c.owner) : `<code>${esc(c.owner)}</code>`}</td><td>${esc(c.kind)}</td><td>${c.claims.map(k => `${esc(k.value)} ${srcs(k.sources)}`).join('<br>')}</td><td class="note">${esc(c.note || '')}</td></tr>`).join('');
+
+// ---------- todo ----------
+const kinds = {todo: 'Research questions', link: 'Parent links not yet documented', missing: 'Missing vitals', unsourced: 'Unsourced facts'};
+document.getElementById('tlist').innerHTML = Object.keys(kinds).map(k => {
+  const items = D.todo.filter(t => t.kind === k); if (!items.length) return '';
+  return `<h3>${kinds[k]} (${items.length})</h3><table><tbody>${items.map(t => `<tr><td style="width:260px">${plink(t.who)}</td><td>${esc(t.text)}</td></tr>`).join('')}</tbody></table>`;
+}).join('');
+
+// ---------- sources ----------
+document.getElementById('slist').innerHTML = Object.values(S).map(s => `
+  <div class="srcbox" id="src-${s.id}">
+    <b>${esc(s.title)}</b> <code class="muted">${s.id}</code> ${s.tier ? `<span class="pill muted">${esc(s.tier)}</span>` : ''} ${s.type ? `<span class="pill muted">${esc(s.type)}</span>` : ''}
+    <div class="note">${[s.author, s.date, s.repository].filter(Boolean).map(esc).join(' · ')}${s.url ? ` · <a href="${esc(s.url)}" target="_blank" rel="noopener">link</a>` : ''}</div>
+    ${s.citation ? `<div class="note">${esc(s.citation)}</div>` : ''}
+    ${s.note ? `<div class="note wrap">${esc(String(s.note).trim())}</div>` : ''}
+    ${(s.files || []).length ? `<div class="note">Files: ${s.files.map(esc).join(', ')}</div>` : ''}
+    ${(s.cites || []).length ? `<div class="note">Cited for: ${s.cites.map(plink).join(', ')}</div>` : '<div class="note c-unverified">Not cited by any fact yet</div>'}
+  </div>`).join('');
+
+route();
+</script>
+</body>
+</html>

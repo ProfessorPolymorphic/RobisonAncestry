@@ -1,0 +1,226 @@
+# Sources — every fact in people.yaml / families.yaml cites one or more of these ids.
+#
+# Fields:
+#   id          stable slug, referenced from events/names/links
+#   title       what the source is
+#   type        family-chart | compiled-report | vital-index | census | cemetery |
+#               newspaper | archive | register | website | book | border-record
+#   tier        primary (original record) | derivative (index/transcription of a record)
+#               | compiled (someone's write-up: family chart, report, website)
+#   date        when the source was created (date grammar: see README)
+#   files       scans/files in this folder that are this source (add as paper is digitized)
+#   url, repository, citation, note   as needed
+
+- id: typed-chart
+  title: '"The Robison Family" — typed descendant chart'
+  type: family-chart
+  tier: compiled
+  date: abt 1988
+  author: Unknown family member (compiled from family knowledge)
+  files:
+    - "family tree 001.jpg"
+  note: >
+    Typewritten single-page chart, nine generations from Hugh Robison (b.1766) down to
+    children born 1982–1986. Header reads "ARRIVING CANADA ABOUT 1792 FROM COUNTY OF TYRONE
+    IRELAND". Dating: latest birth shown is Mar 1986 and Bill Robison's sons (b. c.1970/72)
+    are not shown, so it was probably compiled late 1980s from a branch in Bert's family.
+    Gives exact day-month-year dates that no other source in this dataset has. Children are
+    given by first name only; surnames are assumed from the father. Spelling "Samual" is the chart's.
+
+- id: robison-line-report
+  title: "The Robison Line — Seven generations, 1802 to the present"
+  type: compiled-report
+  tier: compiled
+  date: 2026-08
+  author: Compiled for Barrie Robison
+  files:
+    - "The-Robison-Line_1.docx"
+    - "tree-crop.png"
+  note: >
+    Research report built from online indexes (census, vital statistics, cemetery and
+    newspaper transcriptions). Does NOT know about Hugh Robison or the Tyrone origin; lists
+    Samuel's father as "Open". Every census / vital-index fact in this dataset that cites
+    census-* or *-vitals ids was taken from this report's citations and has not yet been
+    re-checked against the original index entries.
+
+- id: nakusp-cemetery
+  title: Nakusp Cemetery burial list (Vernon & District Family History Society transcription)
+  type: cemetery
+  tier: derivative
+  url: https://vdfhs.com
+  note: Entry "W 190 ROBISON H. Barrie 1904 1965" in the Women's Institute section — the only Robison in the register.
+
+- id: obit-bill-2011
+  title: Arrow Lakes News — obituary of William "Bill" Robison
+  type: newspaper
+  tier: primary
+  date: 2011-05-11
+  url: https://arrowlakesnews.com
+  note: >
+    Names parents ("son of H. Barrie and Jean Robison"), birth at Golden BC 1 Aug 1938, wife Pat,
+    sons Barrie and Zane, grandsons Jacob and Nicholas, brother Bert. The only record found that
+    states the IV→V link outright.
+
+- id: mb-vitals
+  title: Manitoba Vital Statistics indexes — births 1870–1925, deaths 1871–1951
+  type: vital-index
+  tier: derivative
+  url: https://vitalstats.gov.mb.ca/Query.php
+  note: Herbert b. 19 Jan 1904 Carman and the full sibling set; Herbert Edward d. 18 Jul 1933 Carman; Anna d. 5 Jul 1933 Winnipeg.
+
+- id: bc-deaths
+  title: British Columbia Death Index, 1872–1990
+  type: vital-index
+  tier: derivative
+  repository: BC Archives
+  note: >
+    Herbert (transcribed "Beringer") Robison, 1965, Nakusp; Jean Lillian Robison, 1976, Nakusp — the
+    only two Robison deaths registered at Nakusp in 118 years. Registration numbers not yet recorded;
+    ordering the registrations would confirm parents and Jean's maiden name.
+
+- id: census-1851
+  title: Census of Canada 1851 — Prince Edward County, Canada West
+  type: census
+  tier: derivative
+  note: >
+    Samuel indexed as Robison, wife and children as Robinson, probable brother William as Robeson.
+    Index carries alternate reading "Jane Buchanan"; a lone James Buchanan (~25) enumerated immediately after the children.
+
+- id: census-1861
+  title: Census of Canada 1861 — Prince Edward County, Canada West
+  type: census
+  tier: derivative
+
+- id: census-1871
+  title: Census of Canada 1871 — Prince Edward County, Ontario
+  type: census
+  tier: derivative
+  note: William, Mary and two-year-old Herbert on consecutive record IDs (twice indexed). Samuel and Jane still living.
+
+- id: census-1911
+  title: Census of Canada 1911 — Macdonald, Manitoba
+  type: census
+  tier: derivative
+  note: Herbert Barringer indexed as "Burre Robison".
+
+- id: census-1916
+  title: Census of Prairie Provinces 1916 — Manitoba
+  type: census
+  tier: derivative
+  note: Herbert Barringer indexed as "Herbert B Robinson".
+
+- id: census-1931
+  title: Census of Canada 1931 — British Columbia
+  type: census
+  tier: derivative
+
+- id: on-marriages
+  title: Ontario marriages 1826–1943, register no. 897495
+  type: register
+  tier: derivative
+  citation: "William Robison and Mary Berringer, Prince Edward County, 1865"
+
+- id: on-deaths
+  title: Ontario death registrations
+  type: vital-index
+  tier: derivative
+  note: Samuel Robison, 1875, Prince Edward; Walter Barringer, 1878.
+
+- id: border-crossing
+  title: US border-crossing records, Eastport, Idaho (Kingsgate crossing)
+  type: border-record
+  tier: derivative
+  note: Herbert Barringer Robison entering the US at Eastport, Idaho, birthplace given as Carman, Manitoba. Date and record number not yet captured.
+
+- id: alhs
+  title: Arrow Lakes Historical Society archives, Nakusp
+  type: archive
+  tier: primary
+  url: https://alhs-archives.com
+  note: >
+    Accession 2014.018.2628 (Bill Robison holding son Barrie, Canada Day parade 1 July 1972);
+    2011.004.34 (Nakusp High School graduating class, 1956); 2006.011.30.124.1 (Pat Robison,
+    Kinette Club registrar, April 1971); donor file "Estate of Bill Robison", accessions 2011.023 and 2014.003.
+
+- id: valley-voice
+  title: The Valley Voice (Nakusp / New Denver / Slocan), 1997–2000, via BC Regional Digitized History
+  type: newspaper
+  tier: primary
+  url: https://bcrdh.ca
+  note: Bill Robison's teaching career, the 1999 Pioneer Pageant, and the March 2000 profile of Zane Robison at UNBC.
+
+- id: nakusp-library
+  title: Nakusp Public Library — History of the Library
+  type: website
+  tier: compiled
+  url: https://nakusplibrary.ca
+  note: Jean Robison librarian from January 1955 for twenty years; 165 registered borrowers (95 adults, 70 children) when she took over.
+
+- id: unbc-wall
+  title: UNBC Timberwolves Wall of Honour — Zane Robison, inducted 2021
+  type: website
+  tier: compiled
+  url: https://unbctimberwolves.com
+
+- id: clan-gunn
+  title: Clan Gunn Society / Clan Gunn Society of North America — sept lists
+  type: website
+  tier: compiled
+  url: https://clangunnsociety.org
+  note: Robison and Robson appear on the sept list. Sept membership is an affiliation of surname, not proof of descent.
+
+- id: gordon-1618
+  title: Sir Robert Gordon, A Genealogical History of the Earldom of Sutherland (c.1618, publ. 1813)
+  type: book
+  tier: primary
+  note: '"John Robson, chieftain of Clangun in Catteness."'
+
+# ---- added 2026-08-23 from "The Golden–Field–Nakusp Robison Lineage.md" ----
+
+- id: golden-field-lineage
+  title: "The Golden–Field–Nakusp Robison Lineage — working research summary"
+  type: compiled-report
+  tier: compiled
+  date: 2026-08-23
+  files:
+    - "The Golden–Field–Nakusp Robison Lineage.md"
+  note: >
+    Independent research pass that found the 1904 county history and the Manitoba Historical Society
+    biography. Treats the identification of Herbert Barringer with "H. Barrie" as highly probable but
+    unproved (it did not have the Nakusp cemetery stone or the BC death index, which settle it).
+
+- id: pioneer-life-1904
+  title: "Pioneer Life on the Bay of Quinte (Toronto, 1904)"
+  type: book
+  tier: compiled
+  date: 1904
+  url: https://archive.org/stream/pioneerlifeonbay00torouoft/pioneerlifeonbay00torouoft_djvu.txt
+  note: >
+    County history with family sketches. Hugh Robison b. 1766 County Tyrone; m. Rebecca Dougall,
+    dau. of Dr. William Dougall; to New Brunswick c.1792 with infant son Hugh; to Hillier Township,
+    Prince Edward County c.1806–07; 200 acres at Stinson's Block ("Robison's Point"); Presbyterian;
+    d. aged 76, buried on the family property. Samuel m. Jane Arthur; William A. m. Mary E.
+    "Berringer", settled Consecon; their son Herbert a lawyer in Carman, Manitoba. Published a
+    century after the events — strong inherited family history, not original record. The typed
+    chart's header matches this book closely and may derive from it.
+
+- id: mhs-robison-he
+  title: "Manitoba Historical Society, Memorable Manitobans: Herbert Edward Robison"
+  type: website
+  tier: compiled
+  url: https://www.mhs.mb.ca/docs/people/robison_he.shtml
+  note: >
+    Cites birth registrations, newspapers, burial transcriptions. Born Consecon 19 Mar 1869, son of
+    William A. Robison and Mary E. Barringer; teacher, then lawyer; to Carman 1899; mayor of Carman
+    1911–1913; King's Counsel 1914; m. Anna Falconer 11 Jul 1900; five children; d. Carman 18 Jul 1933.
+
+- id: obit-bert-2013
+  title: "The Golden Star — obituary of Herbert \"Bert\" Robison"
+  type: newspaper
+  tier: primary
+  date: 2013
+  url: https://thegoldenstar.net/obituaries/herbert-bert-robison/
+  note: >
+    Born Carman, Manitoba; grew up mainly in Field, BC; CP Rail telegrapher as a teenager, 43 years
+    with CP Rail, retired 1986 as customer-service supervisor; last ten years in Golden; died Golden
+    25 Aug 2013 aged 85.
