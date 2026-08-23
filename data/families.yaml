@@ -150,7 +150,7 @@
   partners: [ryan-colby-robison-1982, melanie-christine-heil-1989]
   sources: [family-knowledge]
   events:
-    - {type: marriage, sources: [family-knowledge], note: "Married; date not yet recorded."}
+    - {type: marriage, date: 2013-08-31, sources: [family-knowledge], note: "Supplied by Barrie Robison, Aug 2026."}
   children:
     - {person: rory-bjorn-robison-2015, confidence: documented, sources: [family-knowledge],
        basis: "Stated by Barrie Robison, Aug 2026."}
