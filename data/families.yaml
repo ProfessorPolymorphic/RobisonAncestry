@@ -146,6 +146,17 @@
     - {person: riley-michael-hakeman-2015, confidence: documented, sources: [family-knowledge],
        basis: "Stated by Barrie Robison (first cousin once removed), Aug 2026."}
 
+- id: ryan+melanie
+  partners: [ryan-colby-robison-1982, melanie-christine-heil-1989]
+  sources: [family-knowledge]
+  events:
+    - {type: marriage, sources: [family-knowledge], note: "Married; date not yet recorded."}
+  children:
+    - {person: rory-bjorn-robison-2015, confidence: documented, sources: [family-knowledge],
+       basis: "Stated by Barrie Robison, Aug 2026."}
+    - {person: ayra-jade-robison-2018, confidence: documented, sources: [family-knowledge],
+       basis: "Stated by Barrie Robison, Aug 2026."}
+
 - id: bill+pat
   partners: [william-james-robison-1938, patricia-parsons]
   sources: [obit-bill-2011]

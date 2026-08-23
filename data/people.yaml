@@ -523,6 +523,20 @@
   events:
     - {type: birth, date: 2015-05-09, sources: [family-knowledge], note: "Supplied by Barrie Robison, Aug 2026."}
 
+- id: melanie-christine-heil-1989
+  names: [{given: Melanie Christine, surname: Heil, sources: [family-knowledge]}]
+  sex: F
+  events:
+    - {type: birth, date: 1989-01-20, sources: [family-knowledge], note: "Supplied by Barrie Robison, Aug 2026."}
+- id: rory-bjorn-robison-2015
+  names: [{given: Rory Bjorn, surname: Robison, sources: [family-knowledge]}]
+  events:
+    - {type: birth, date: 2015-08-31, sources: [family-knowledge], note: "Supplied by Barrie Robison, Aug 2026."}
+- id: ayra-jade-robison-2018
+  names: [{given: Ayra Jade, surname: Robison, sources: [family-knowledge]}]
+  events:
+    - {type: birth, date: 2018-08-19, sources: [family-knowledge], note: "Supplied by Barrie Robison, Aug 2026."}
+
 - id: jacob-robison
   names: [{given: Jacob, surname: Robison, sources: [obit-bill-2011]}]
   sex: M
