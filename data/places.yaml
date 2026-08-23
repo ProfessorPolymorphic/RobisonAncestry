@@ -76,3 +76,11 @@
   name: Pullman, Washington, USA
   lat: 46.73
   lon: -117.18
+- id: trail-bc
+  name: Trail, British Columbia
+  lat: 49.10
+  lon: -117.71
+- id: corvallis-or
+  name: Corvallis, Oregon, USA
+  lat: 44.56
+  lon: -123.26
