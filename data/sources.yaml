@@ -209,6 +209,8 @@
   type: website
   tier: compiled
   url: https://www.mhs.mb.ca/docs/people/robison_he.shtml
+  files:
+    - "scans/PicturesfromColbyAug23_2026/IMG_5353.HEIC"
   note: >
     Cites birth registrations, newspapers, burial transcriptions. Born Consecon 19 Mar 1869, son of
     William A. Robison and Mary E. Barringer; teacher, then lawyer; to Carman 1899; mayor of Carman
@@ -599,3 +601,60 @@
     and the verdict on the Meriwether Lewis lore: impossible as stated (the explorer and
     his only full brother died childless; his sister's children were Andersons), unsupported
     in any looser form.
+
+# ---- added 2026-08-25 (third batch from Colby: the Robison family Bible and Clan Gunn material) ----
+
+- id: robison-family-bible
+  title: Robison family Bible (London, 1876) — handwritten family register
+  type: register
+  tier: primary
+  files:
+    - "scans/PicturesfromColbyAug23_2026/IMG_5346.HEIC"
+    - "scans/PicturesfromColbyAug23_2026/IMG_5347.HEIC"
+    - "scans/PicturesfromColbyAug23_2026/IMG_5348.HEIC"
+    - "scans/PicturesfromColbyAug23_2026/IMG_5349.HEIC"
+    - "scans/PicturesfromColbyAug23_2026/IMG_5350.HEIC"
+    - "scans/PicturesfromColbyAug23_2026/IMG_5351.HEIC"
+    - "scans/PicturesfromColbyAug23_2026/IMG_5352.HEIC"
+  note: >
+    British and Foreign Bible Society printing, London 1876, so the register was begun
+    retrospectively. Pages: Parents (William Robison b. Nov 4 183[7/9 — digit cramped] m. Mary E.
+    Barringer b. 11 Mar 1844, married 14 Mar 1865 "by George Brown"; deaths 13 Nov 1916 and
+    25 Aug 1923); Children (Walter J. b. 6 Apr 1866, Herbert b. 19 Mar 1868, Albert b. 20 Jul 1872,
+    Nancy Jane b. 22 May 1877, Earle Raymond b. 5 Dec 1889); Deaths (Walter d. 21 Sep 1868 aged
+    2y 5m 15d; Albert d. 30 Aug 1877 aged 5y 1m 10d — the age string is internally consistent with
+    20 Jul-30 Aug, so the chart's 29 Jul / 3 Aug are likely misreadings of these very pages;
+    Herbert E. d. 18 Jul 1933 "age 65" — supporting the 1868 birth year); Children and
+    Grandchildren (Herbert E. m. Annie Falconer 11 Jul 1900, five children with exact dates;
+    Earle Raymond m. Pauline Patricia Marshall 12 Jun 1919, daughters Marjorie Loreen b. 14 Aug
+    192[cut off] — Mrs Donald Dunklee — and Jean Bernice b. 29 May 192[cut off] — Mrs Stanley
+    Pierce); a later Deaths page (Herbert E. 18 Jul 1933, Anna 5 Jul 1933, and two arrowed margin
+    dates "Died June 8, 1905" and "Died June 14th 1916" — almost certainly William James and Nora
+    Kathleen, though the June 8 date conflicts with the vitals index's 21 Jun 1905).
+
+- id: icelandic-canadian-1972
+  title: The Icelandic Canadian, Spring 1972 — "The Roots Lie Deep" (Ivan C. Robison's Gunn claim)
+  type: newspaper
+  tier: primary
+  date: 1972
+  files:
+    - "scans/PicturesfromColbyAug23_2026/IMG_5343.HEIC"
+  note: >
+    Page 44: "Mr. Ivan C. Robison of Calgary (formerly of Winnipeg) writes of research he has made
+    into his genealogical background... 'The Robison's come of Viking stock — the name was
+    Robisson, and they are a sept of the Gunn (Gunnar) clan!'" The earliest datable statement of
+    the family's Clan Gunn tradition, and it identifies Ivan Campbell Robison as its researcher —
+    the tradition his son Paul later put on the 1994 coat of arms.
+
+- id: clan-gunn-book-plates
+  title: Clan Gunn reference pages — "Gunn of Kilernan" crest and Gunn tartan plate
+  type: book
+  tier: derivative
+  files:
+    - "scans/PicturesfromColbyAug23_2026/IMG_5344.HEIC"
+    - "scans/PicturesfromColbyAug23_2026/IMG_5345.HEIC"
+  note: >
+    Photocopied clan-book pages kept with the Icelandic Canadian clipping: crest badge (dexter
+    hand holding a sword), motto "Aut pax aut bellum", Caithness/Sutherland territory, the 1464
+    killing of crowner George Gunn by the Keiths; tartan plate with plant badge juniper. Clan
+    background only — no family facts.

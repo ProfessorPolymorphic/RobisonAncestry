@@ -193,10 +193,12 @@
     - {type: birth, date: 1839-11-07, place: prince-edward-co, sources: [typed-chart]}
     - {type: birth, date: abt 1838, place: prince-edward-co, sources: [census-1851, census-1861],
        note: Report gives c.1838–1840 from census ages; compatible with the chart's exact date.}
+    - {type: birth, date: abt 1839-11-04, sources: [robison-family-bible],
+       note: "Bible parents page: 'born Nov 4th(?) 183[7 or 9]' — day and final year digit cramped. Close to but not identical with the chart's Nov 7; re-examine the original page."}
     - {type: residence, date: 1871, place: prince-edward-co, sources: [census-1871]}
     - {type: residence, place: consecon, sources: [pioneer-life-1904], note: "'William A. of Consecon' in the 1904 history."}
-    - {type: death, date: 1916-11-13, place: carman-mb, sources: [robison-headstones, weeks-barringer-record, typed-chart],
-       note: "Followed his son to Manitoba; died Nov 1916 and buried at Carman."}
+    - {type: death, date: 1916-11-13, place: carman-mb, sources: [robison-headstones, weeks-barringer-record, typed-chart, robison-family-bible],
+       note: "Followed his son to Manitoba; died Nov 1916 and buried at Carman. Bible: 'died Nov 13th 1916'."}
     - {type: burial, place: carman-mb, sources: [robison-headstones, weeks-barringer-record]}
   notes: >
     Married Mary Barringer in 1865 — the marriage that explains the middle name carried for the
@@ -304,10 +306,10 @@
     - {given: Mary, surname: Berringer, kind: variant, sources: [on-marriages, pioneer-life-1904], note: "Spelling in the marriage register and the 1904 history."}
   sex: F
   events:
-    - {type: birth, date: 1844-03-11, sources: [weeks-barringer-record, robison-headstones, typed-chart]}
+    - {type: birth, date: 1844-03-11, sources: [weeks-barringer-record, robison-headstones, typed-chart, robison-family-bible]}
     - {type: birth, date: abt 1843, place: prince-edward-co, sources: [census-1861, census-1871],
        note: "Report gives c.1843 from census ages; compatible with the exact date."}
-    - {type: death, date: 1923-08-25, place: carman-mb, sources: [weeks-barringer-record, robison-headstones, typed-chart]}
+    - {type: death, date: 1923-08-25, place: carman-mb, sources: [weeks-barringer-record, robison-headstones, typed-chart, robison-family-bible]}
     - {type: burial, place: carman-mb, sources: [weeks-barringer-record, robison-headstones]}
   notes: The source of the name Barringer. Daughter of Dr. Walter Levi Barringer and Nancy Maria Weeks.
 
@@ -316,11 +318,13 @@
 # ─────────────────────────────────────────────────────────────────────────────
 
 - id: walter-robison-1866
-  names: [{given: Walter, surname: Robison, sources: [typed-chart]}]
+  names:
+    - {given: Walter J., surname: Robison, sources: [robison-family-bible]}
+    - {given: Walter, surname: Robison, kind: variant, sources: [typed-chart]}
   sex: M
   events:
-    - {type: birth, date: 1866-04-06, sources: [typed-chart]}
-    - {type: death, date: 1868-09-21, sources: [typed-chart], note: Aged 2.}
+    - {type: birth, date: 1866-04-06, sources: [typed-chart, robison-family-bible]}
+    - {type: death, date: 1868-09-21, sources: [typed-chart, robison-family-bible], note: "Bible deaths page: aged 2 years 5 months 15 days."}
 - id: herbert-edward-robison-1869
   names:
     - {given: Herbert Edward, surname: Robison, sources: [mb-vitals]}
@@ -329,13 +333,13 @@
   events:
     - {type: birth, date: 1869-03-19, place: consecon, sources: [mhs-robison-he, mb-vitals, census-1871],
        note: "Born three months before Ontario began registering births (July 1869), so no birth certificate exists. Aged 2 in the 1871 census."}
-    - {type: birth, date: 1868-03-19, sources: [robison-headstones, journey-so-far-2006, typed-chart],
-       note: "His Carman headstone and Paul Robison's book both say 1868; the vitals index and MHS say 1869 (age 64 at death fits 1869). Unresolvable without a delayed birth registration — born pre-registration."}
+    - {type: birth, date: 1868-03-19, sources: [robison-headstones, journey-so-far-2006, typed-chart, robison-family-bible],
+       note: "His Carman headstone, Paul Robison's book, AND the family Bible register (twice, plus its deaths-page 'age 65' at death) say 1868; the vitals index and MHS say 1869 (age 64 fits 1869). The Bible — the family's own contemporaneous record — tips the weight toward 1868, but born pre-registration it stays formally unresolved."}
     - {type: occupation, sources: [mhs-robison-he], note: "Taught school, then studied law."}
     - {type: residence, date: 1899, place: carman-mb, sources: [mhs-robison-he], note: "Moved to Carman 1899 as a lawyer; all five children born there. The 1904 history calls him 'a prominent lawyer in Carman'."}
     - {type: residence, date: 1911, place: macdonald-mb, sources: [census-1911]}
     - {type: occupation, date: bet 1911 and 1913, place: carman-mb, sources: [mhs-robison-he], note: "Mayor of Carman. Appointed King's Counsel 1914."}
-    - {type: death, date: 1933-07-18, place: carman-mb, sources: [mhs-robison-he, mb-vitals, typed-chart], note: "Aged 64; thirteen days after his wife."}
+    - {type: death, date: 1933-07-18, place: carman-mb, sources: [mhs-robison-he, mb-vitals, typed-chart, robison-family-bible], note: "Aged 64 (index) or 65 (Bible); thirteen days after his wife."}
     - {type: burial, place: carman-mb, sources: [robison-line-report], note: Buried together with Annie at Carman.}
   notes: >
     The generation that left Ontario for the prairies. Subject of a Manitoba Historical Society
@@ -345,24 +349,52 @@
     Paul Robison: he "died in his sleep at home... a somewhat embittered man, 14 days after the
     death of his wife" (Appx Q gives heart failure; he suffered gout, kidney stones and a 'blood disorder').
 - id: albert-robison-1872
-  names: [{given: Albert, surname: Robison, sources: [typed-chart]}]
+  names: [{given: Albert, surname: Robison, sources: [typed-chart, robison-family-bible]}]
   sex: M
   events:
+    - {type: birth, date: 1872-07-20, sources: [robison-family-bible], preferred: true,
+       note: "Bible: born 20 July 1872; its deaths-page age of '5 years 1 month 10 days' is exactly consistent with 20 Jul 1872 - 30 Aug 1877, so the chart's 29 Jul / 3 Aug pair is almost certainly a misreading of these very pages."}
     - {type: birth, date: 1872-07-29, sources: [typed-chart]}
-    - {type: death, date: 1877-08-03, sources: [typed-chart], note: Aged 5.}
+    - {type: death, date: 1877-08-30, sources: [robison-family-bible], preferred: true, note: "Bible deaths page: 30 Aug 1877, aged 5y 1m 10d. Months after his sister Nancy Jane's birth."}
+    - {type: death, date: 1877-08-03, sources: [typed-chart], note: "The Bible parents-page's cramped 'Aug 3[?]' — superseded by its own deaths page."}
 - id: nancy-jane-robison-1877
-  names: [{given: Nancy Jane, surname: Robison, sources: [typed-chart]}]
+  names: [{given: Nancy Jane, surname: Robison, sources: [typed-chart, robison-family-bible]}]
   sex: F
   events:
-    - {type: birth, date: 1877-05-22, sources: [typed-chart]}
+    - {type: birth, date: 1877-05-22, sources: [typed-chart, robison-family-bible]}
     - {type: death, date: 1961-11-26, sources: [typed-chart]}
 - id: earle-raymond-robison-1889
-  names: [{given: Earle Raymond, surname: Robison, sources: [typed-chart]}]
+  names:
+    - {given: Earle Raymond, surname: Robison, sources: [typed-chart, robison-family-bible]}
+    - {given: Earle Raymond B., surname: Robison, kind: variant, sources: [robison-family-bible], note: "The parents page adds a 'B.' — plausibly Barringer, in the family's maiden-name pattern."}
   sex: M
   living: false
   events:
-    - {type: birth, date: 1889-12-05, sources: [typed-chart]}
-  notes: Chart leaves his death blank.
+    - {type: birth, date: 1889-12-05, sources: [typed-chart, robison-family-bible]}
+  notes: >
+    Chart leaves his death blank. The Bible register (new, Aug 2026) gives his marriage — Pauline
+    Patricia Marshall, 12 June 1919 — and daughters Marjorie Loreen (Mrs Donald Dunklee) and
+    Jean Bernice (Mrs Stanley Pierce): a whole branch previously missing from the model.
+- id: pauline-patricia-marshall
+  names: [{given: Pauline Patricia, surname: Marshall, sources: [robison-family-bible]}]
+  sex: F
+  living: false
+- id: marjorie-loreen-robison
+  names:
+    - {given: Marjorie Loreen, surname: Robison, sources: [robison-family-bible]}
+    - {given: Marjorie Loreen, surname: Dunklee, kind: variant, sources: [robison-family-bible], note: "'Mrs Donald Dunklee'. The parents page spells her Marjory."}
+  sex: F
+  living: false
+  events:
+    - {type: birth, date: abt 1920, sources: [robison-family-bible], note: "Bible: born 14 Aug 192[final digit cut off in the scan] — re-photograph the page edge."}
+- id: jean-bernice-robison
+  names:
+    - {given: Jean Bernice, surname: Robison, sources: [robison-family-bible]}
+    - {given: Jean Bernice, surname: Pierce, kind: variant, sources: [robison-family-bible], note: "'Mrs Stanley Pierce'."}
+  sex: F
+  living: false
+  events:
+    - {type: birth, date: abt 1922, sources: [robison-family-bible], note: "Bible: born 29 May 192[final digit cut off in the scan] — re-photograph the page edge."}
 
 - id: annie-falconer-1880
   names:
@@ -374,8 +406,8 @@
        note: "Headstone and Paul's book: 30 December 1880."}
     - {type: birth, date: 1880-12-31, sources: [mb-vitals], note: "Vitals index — one day later than the stone."}
     - {type: birth, date: 1882, sources: [mhs-robison-he], note: "MHS gives 1882–1933."}
-    - {type: death, date: 1933-07-05, place: winnipeg, sources: [mb-vitals, typed-chart, journey-so-far-2006],
-       note: "Aged 52, at Ivan and Corinne's Winnipeg home, shortly after having all her teeth removed; cause 'pontine haemorrhage' (a massive stroke)."}
+    - {type: death, date: 1933-07-05, place: winnipeg, sources: [mb-vitals, typed-chart, journey-so-far-2006, robison-family-bible],
+       note: "Aged 52, at Ivan and Corinne's Winnipeg home, shortly after having all her teeth removed; cause 'pontine haemorrhage' (a massive stroke). The Bible's later deaths page: 'Anna Robison Died July 5th 1933'."}
     - {type: burial, place: carman-mb, sources: [robison-line-report, robison-headstones]}
   notes: >
     Her maiden name became the middle name of her son William Falconer Robison. Per Paul Robison,
@@ -394,7 +426,9 @@
     - {given: Ivan C., surname: Robison, kind: variant, sources: [typed-chart]}
   sex: M
   events:
-    - {type: birth, date: 1901-08-12, place: carman-mb, sources: [mb-vitals, typed-chart]}
+    - {type: birth, date: 1901-08-12, place: carman-mb, sources: [mb-vitals, typed-chart, robison-family-bible]}
+    - {type: residence, date: 1972, place: calgary-ab, sources: [icelandic-canadian-1972],
+       note: "The Icelandic Canadian (Spring 1972) names 'Mr. Ivan C. Robison of Calgary (formerly of Winnipeg)' as the researcher of the family's Norse descent: 'The Robison's come of Viking stock — the name was Robisson, and they are a sept of the Gunn (Gunnar) clan!' — the earliest datable statement of the Clan Gunn tradition his son Paul later put on the 1994 coat of arms."}
     - {type: education, sources: [journey-so-far-2006], note: "Degrees in Arts and Law, University of Manitoba."}
     - {type: occupation, sources: [journey-so-far-2006],
        note: "Law sidelined by the Depression; Retail Credit Company, Winnipeg; transferred May 1941 to Calgary as Branch Manager for Alberta and the NWT; from Dec 1946 in real estate, becoming one of Canada's first independent fee appraisers. Prominent United Church layman (first layman nominated as Moderator — declined) and World Council of Churches delegate."}
@@ -423,9 +457,11 @@
     - {given: William J., surname: Robison, kind: variant, sources: [typed-chart]}
   sex: M
   events:
-    - {type: birth, date: 1902-08-31, place: carman-mb, sources: [mb-vitals, typed-chart]}
+    - {type: birth, date: 1902-08-31, place: carman-mb, sources: [mb-vitals, typed-chart, robison-family-bible]}
     - {type: death, date: 1905-06-21, sources: [mb-vitals, journey-so-far-2006],
        note: "Aged 2 — drowned in a creek on the family land at Carman (Paul Robison). Chart gives 'Jun 1905'."}
+    - {type: death, date: 1905-06-08, sources: [robison-family-bible],
+       note: "The Bible's later deaths page has an arrowed margin note 'Died June 8, 1905' pointing toward the grandchildren list — almost certainly him, but 13 days off the vitals index. Check which line the arrow touches on the original page, and the Manitoba death registration."}
   notes: His nephew Bill (b. 1938) was named for him.
 - id: herbert-barringer-robison-1904
   names:
@@ -437,7 +473,8 @@
     - {given: Herbert B, surname: Robinson, kind: variant, sources: [census-1916]}
   sex: M
   events:
-    - {type: birth, date: 1904-01-19, place: carman-mb, sources: [mb-vitals, typed-chart]}
+    - {type: birth, date: 1904-01-19, place: carman-mb, sources: [mb-vitals, typed-chart, robison-family-bible],
+       note: "The family Bible register confirms: 'Herbert Barringer Robison born Jan 19th 1904'."}
     - {type: immigration, place: eastport-id, sources: [border-crossing],
        note: "US border crossing at Eastport, Idaho (the Kingsgate crossing into the West Kootenay), birthplace given as Carman, Manitoba. Date not yet captured. The record that ties the Manitoba family to BC."}
     - {type: residence, date: bet 1930 and 1938, place: field-bc, sources: [obit-bert-2013], note: "Inferred: son Bert 'grew up mainly in Field'. Possibly a CPR employee — Bert joined CP Rail as a teenager."}
@@ -462,15 +499,16 @@
     # (book also uses Norah)
   sex: F
   events:
-    - {type: birth, date: 1905-09-26, place: carman-mb, sources: [mb-vitals, typed-chart]}
-    - {type: death, date: 1916-06-14, sources: [mb-vitals, typed-chart, journey-so-far-2006], note: "Aged 10, of meningitis."}
+    - {type: birth, date: 1905-09-26, place: carman-mb, sources: [mb-vitals, typed-chart, robison-family-bible]}
+    - {type: death, date: 1916-06-14, sources: [mb-vitals, typed-chart, journey-so-far-2006, robison-family-bible],
+       note: "Aged 10, of meningitis. The Bible's arrowed margin note 'Died June 14th 1916' matches the index exactly — which also supports reading the companion margin date (8 Jun 1905) as her brother William James."}
 - id: william-falconer-robison-1908
   names:
     - {given: William Falconer, surname: Robison, sources: [mb-vitals]}
     - {given: William F., surname: Robison, kind: variant, sources: [typed-chart]}
   sex: M
   events:
-    - {type: birth, date: 1908-08-31, place: carman-mb, sources: [mb-vitals, typed-chart]}
+    - {type: birth, date: 1908-08-31, place: carman-mb, sources: [mb-vitals, typed-chart, robison-family-bible]}
     - {type: death, date: 1996, sources: [robison-line-report], note: Chart leaves his death blank.}
 - id: audrey-louise-french-bossy
   names: [{given: Audrey Louise French, surname: Bossy, sources: [robison-line-report]}]

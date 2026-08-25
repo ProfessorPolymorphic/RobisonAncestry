@@ -67,21 +67,30 @@
 - id: william-a+mary-e
   partners: [william-a-robison-1839, mary-e-barringer-1844]
   events:
-    - {type: marriage, date: 1865-03-14, place: prince-edward-co, sources: [typed-chart]}
+    - {type: marriage, date: 1865-03-14, place: prince-edward-co, sources: [typed-chart, robison-family-bible],
+       note: "The family Bible confirms the chart's exact date and adds the officiant: 'Married March 14th 1865 by George Brown'."}
     - {type: marriage, date: 1865, place: prince-edward-co, sources: [on-marriages], note: Register no. 897495.}
   children:
-    - {person: walter-robison-1866}
-    - {person: herbert-edward-robison-1869, confidence: documented, sources: [mhs-robison-he, pioneer-life-1904, census-1871],
-       basis: "Manitoba Historical Society biography names him son of William A. Robison and Mary E. Barringer; the 1904 county history says William A. of Consecon's son Herbert was a lawyer in Carman. 1871 census has two-year-old Herbert with William and Mary."}
-    - {person: albert-robison-1872}
-    - {person: nancy-jane-robison-1877}
-    - {person: earle-raymond-robison-1889}
+    - {person: walter-robison-1866, confidence: documented, sources: [robison-family-bible]}
+    - {person: herbert-edward-robison-1869, confidence: documented, sources: [mhs-robison-he, pioneer-life-1904, census-1871, robison-family-bible],
+       basis: "Manitoba Historical Society biography names him son of William A. Robison and Mary E. Barringer; the 1904 county history says William A. of Consecon's son Herbert was a lawyer in Carman. 1871 census has two-year-old Herbert with William and Mary. The family Bible's own register lists him among their issue."}
+    - {person: albert-robison-1872, confidence: documented, sources: [robison-family-bible]}
+    - {person: nancy-jane-robison-1877, confidence: documented, sources: [robison-family-bible]}
+    - {person: earle-raymond-robison-1889, confidence: documented, sources: [robison-family-bible]}
+
+- id: earle+pauline
+  partners: [earle-raymond-robison-1889, pauline-patricia-marshall]
+  events:
+    - {type: marriage, date: 1919-06-12, sources: [robison-family-bible]}
+  children:
+    - {person: marjorie-loreen-robison, confidence: documented, sources: [robison-family-bible]}
+    - {person: jean-bernice-robison, confidence: documented, sources: [robison-family-bible]}
 
 - id: herbert-e+annie
   partners: [herbert-edward-robison-1869, annie-falconer-1880]
   events:
-    - {type: marriage, date: 1900-07-11, place: belleville-on, sources: [mhs-robison-he, journey-so-far-2006, typed-chart],
-       note: "At the Presbyterian Church in Belleville, Ontario."}
+    - {type: marriage, date: 1900-07-11, place: belleville-on, sources: [mhs-robison-he, journey-so-far-2006, typed-chart, robison-family-bible],
+       note: "At the Presbyterian Church in Belleville, Ontario. Bible: 'Herbert E. Robison m. Annie Falconer July 11th 1900'."}
   children:
     - {person: ivan-campbell-robison-1901, confidence: documented, sources: [mb-vitals]}
     - {person: william-james-robison-1902, confidence: documented, sources: [mb-vitals]}
