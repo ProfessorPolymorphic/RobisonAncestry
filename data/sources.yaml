@@ -432,3 +432,170 @@
     BRAEMORE, whose descendant Sir William Gunn became an imperial general by 1649; motto "Aut pax
     aut bellum"; plant badge juniper; first recognized chief in 200+ years, Iain Alexander Gunn of
     Banniskirk, 2015. Requested for linking by Colby, Aug 2026.
+
+# ---- added 2026-08-23 (Lewis-line deep research: census images, Official Registers, Bonners
+#      Ferry Herald, BC registrations; all page images or OCR read directly, then re-verified
+#      by independent adversarial check — see lewis-line-report-2026) ----
+
+- id: census-1910-us-eastport
+  title: 1910 US Census — Spencer Lewis household, Eastport (Bonner County), Idaho
+  type: census
+  tier: primary
+  date: 1910-05-07
+  url: https://archive.org/details/13thcensus1910po223unit
+  note: >
+    ED 77, sheet 12A, lines 4-7 (NARA T624 roll 223, leaf 121; page image read via IIIF).
+    Lewis, Spencer, head, 34, second marriage (M2) of 1 8/12 years, b. Michigan, parents'
+    birthplaces "Don't Know", Custom Inspector, U.S.; wife Daisy J., 25, first marriage,
+    1 child/1 living, b. Canada (French), immigrated 1908; daughter Eva R., 5, b. Idaho,
+    MOTHER b. NEW YORK (i.e. from an earlier marriage); daughter Jean L., 1, b. Idaho,
+    mother b. Canada. Anchored to Eastport by Immigration Service neighbours (Voligny,
+    Akiyama) who appear at "Eastport Idaho" in the 1911 Official Register.
+
+- id: census-1920-us-eastport
+  title: 1920 US Census — Spencer A. Lewis household, Eastport Precinct, Boundary County, Idaho
+  type: census
+  tier: primary
+  date: 1920-01
+  url: https://archive.org/details/14thcensusofpopu289unit
+  note: >
+    ED 34, sheet 1B, lines 85-89, dwelling 26 (NARA T625 roll 289, leaf 435; image read via
+    IIIF). Lewis, Spencer A., head, owns home free, 44, WIDOWED, b. Michigan, FATHER b. OHIO,
+    MOTHER b. NEW YORK, Customs Inspector; children all b. Idaho: Eva R. 14, Jean L. 10,
+    Thomas R. 8 (son), Della M. 4. The single most valuable record for tracing back —
+    the only named-column statement of Spencer's parents' birthplaces (repeated in 1930).
+
+- id: census-1930-us-eastport
+  title: 1930 US Census — Spencer A. Lewis household (with Jean Robison and infant Herbert), Eastport, Idaho
+  type: census
+  tier: primary
+  date: 1930-04
+  url: https://archive.org/details/15thcensus398unit
+  note: >
+    ED 11-7, sheet 1B, lines 78-82, dwelling 24 (NARA T626 roll 398, leaf 51; image read via
+    IIIF). Lewis, Spencer A., head, home valued $800, 54, WIDOWED, age at FIRST marriage 29
+    (≈1904-05), b. Michigan, father b. Ohio, mother b. New York, Inspector, U.S. Customs;
+    ROBISON, Jean L., daughter, 20, married at 17, b. Idaho, mother "Canada-French",
+    housekeeper; Lewis, Thomas R., son, 18; Lewis, Della M., daughter, 15 (marked absent);
+    ROBISON, Herbert S., GRANDSON, 1 5/12, b. "Canada-English" — Jean and baby Bert living
+    in her father's Eastport house.
+
+- id: census-1940-us-eastport
+  title: 1940 US Census — Spencer Lewis household (third wife Patricia and five children), Eastport, Idaho
+  type: census
+  tier: primary
+  date: 1940-04-11
+  url: https://nara-1940-census.s3.amazonaws.com/population-schedules/id/boundary-county/ed/11-7/m-t0627-00741-00939.jpg
+  note: >
+    ED 11-7, sheet 1B, lines 49-55, house 113 (same owned $800 home as 1930). Lewis, Spencer,
+    head, 64, MARRIED, 8th grade, b. Michigan, same house in 1935, Customs Inspector, U.S.
+    Treasury Dept, $3,000/yr; wife Patricia, 29, b. Montana; children Anna Mae 9 (b. WA),
+    Adele Rae 6 (WA), Spencer Jr. 5 (WA), Wayne Roger 4 (ID), Phillip Gene 2 (ID).
+
+- id: official-registers-1907-21
+  title: Official Register of the United States, 1907–1921 editions — Spencer Lewis, Customs Service, Eastport
+  type: register
+  tier: primary
+  url: https://archive.org/details/officialregister11unit
+  note: >
+    Seven biennial editions (1907, 1909, 1911, 1913, 1915, 1917, 1921; full OCR read on
+    archive.org) list Spencer Lewis, Treasury Dept, Customs Service — Inspector at Eastport,
+    Idaho by 1 Jul 1907 ($3.50/day), Mounted Inspector 1909-1913, Inspector 1915-1921
+    ($4/day by 1921). EVERY edition gives state of birth MICHIGAN; "whence appointed" At
+    Large-Idaho, later Kootenai County, Idaho. No entry in the 1905 register, so the 1907
+    Eastport post was his first federal appointment. Independent federal corroboration of
+    the retirement clipping's "came west out of Michigan".
+
+- id: bfh-daisy-obit-1919
+  title: Bonners Ferry Herald, 29 Jul 1919 — obituary of Mrs. Daisy Lewis of Eastport
+  type: newspaper
+  tier: primary
+  date: 1919-07-29
+  url: https://chroniclingamerica.loc.gov/lccn/sn86091084/
+  note: >
+    Daisy Lewis, wife of Spencer Lewis, died at her Eastport home Friday 25 Jul 1919; born
+    7 Sep 1885 at Toronto, Canada; at Eastport "some ten years"; married there to Mr. Lewis
+    by Rev. Henderson; survived by husband and three children. Matches the Idaho death index:
+    Daisy Lewis, b. 7 Sep 1885, d. 25 Jul 1919 at Eastport (indexed "Eastford"), certificate
+    #026548 — the only Lewis death registered at Eastport in the 1911-1951 index.
+
+- id: bfh-eva-wedding-1922
+  title: Bonners Ferry Herald, 22 & 29 Jun 1922 — bridal shower and wedding of Miss Eva Lewis
+  type: newspaper
+  tier: primary
+  date: 1922-06-29
+  url: https://chroniclingamerica.loc.gov/lccn/sn86091084/1922-06-29/ed-1/seq-1/
+  note: >
+    "Miss Eva Lewis ... the daughter of U.S. Custom Inspector Spencer Lewis" was given a
+    bridal shower by the ladies of Eastport (sister "Miss Jean Lewis" among the guests) and
+    married Francis Fowler of Calgary at her Eastport home on Monday 26 Jun 1922. Proves Eva
+    was Spencer's DAUGHTER, not his wife — the key correction to the 1911 photo caption's
+    remembered roles.
+
+- id: bfh-spence-visits-1912
+  title: Bonners Ferry Herald, 2 Aug & 13 Sep 1912 — Mrs. Spence of Cranbrook, sister of Mrs. Spencer Lewis
+  type: newspaper
+  tier: primary
+  date: 1912-09-13
+  url: https://chroniclingamerica.loc.gov/lccn/sn86091084/1912-09-13/ed-1/seq-5/
+  note: >
+    Eastport columns, twice: "Mr. and Mrs. J. W. Spence of Cranbrook, B.C. spent Sunday and
+    Monday at the home of Mrs. Spence's sister, Mrs. Spencer Lewis." The only adult Spence
+    of Cranbrook in the period is J. H. Spence (Wrigley's 1918 BC Directory) — see
+    bc-marriage-1908-spence for the identification of Mrs. Spence, and hence the hypothesis
+    for Daisy's maiden family.
+
+- id: bc-marriage-1908-spence
+  title: BC marriage registration 1908-09-162863 — John Henry Spence & Annie Patrick Macdonald, Cranbrook
+  type: register
+  tier: primary
+  date: 1908-04-28
+  url: https://search-collections.royalbcmuseum.bc.ca/genealogy-images/004401580/004401580_00441.jpg
+  note: >
+    Original registration image read: John Henry Spence, 35, engineer, of Cranbrook, b.
+    Waterdown, Ont. (parents Wm Spence & Rachel S. Clarke) m. ANNIE PATRICK MACDONALD, 29,
+    spinster, of Cranbrook, born DALKEITH, SCOTLAND, parents WM MACDONALD and ALEXANDERINA
+    PATRICK; witness Mary Macdonald; Presbyterian. If the Herald's "sister" is literal,
+    Daisy Lewis was née MACDONALD, daughter of William MacDonald and Alexanderina Patrick —
+    a hypothesis, not proof, until Daisy's own death certificate (#026548) or 1908 marriage
+    record is obtained.
+
+- id: bc-death-reg-jean-1976
+  title: BC death registration 1976-09-011745 — Jean Lillian Robison, Nakusp
+  type: register
+  tier: primary
+  date: 1976-07-18
+  url: https://search-collections.royalbcmuseum.bc.ca/Image/Genealogy/3215603c-f5b7-4181-a477-242a40c15ec1
+  note: >
+    Jean Lillian Robison, d. 18 Jul 1976 at Nakusp, age 66, widow of Herbert Beringer
+    Robison; father "Lewis, Spencer"; mother's maiden name unknown, born Quebec (informant's
+    belief — conflicts with the 1919 obituary's Toronto and the censuses' "Canada"; the
+    French-Canada entries are likely enumerator/informant error for a Scottish-named mother
+    who died when Jean was nine).
+
+- id: eastport-idgenweb-history
+  title: Boundary County IDGenWeb — history of Eastport and the border station
+  type: website
+  tier: compiled
+  url: http://boundary.idgenweb.org/history/post/eastport-idaho
+  note: >
+    Before the 1934 federal purchase of the border-station site, "to the southeast along an
+    unpaved drive stood two garages and Spencer Lewis' frame building" — physical
+    corroboration that Spencer owned property at the crossing itself.
+
+- id: lewis-line-report-2026
+  title: "The Lewis Line of Eastport — deep-research report, Aug 2026"
+  type: compiled-report
+  tier: compiled
+  date: 2026-08-23
+  files:
+    - "The Lewis Line of Eastport.md"
+  note: >
+    Synthesis of an 18-agent research run (census images 1910-1950, Official Registers
+    1907-1921, Bonners Ferry Herald via Chronicling America, Idaho death index, BC vital
+    registrations, Meriwether Lewis scholarship; every key claim adversarially re-verified
+    against the cited images). Documents the family-memory correction (wife Daisy vs
+    daughter Eva), Daisy's probable Macdonald maiden identity, Spencer's three marriages,
+    and the verdict on the Meriwether Lewis lore: impossible as stated (the explorer and
+    his only full brother died childless; his sister's children were Andersons), unsupported
+    in any looser form.

@@ -133,3 +133,23 @@
   name: Salmon Arm, British Columbia
   lat: 50.70
   lon: -119.28
+- id: michigan
+  name: Michigan, USA
+  note: State-level place for records that give no town.
+- id: idaho
+  name: Idaho, USA
+  note: State-level place for records that give no town.
+- id: toronto-on
+  name: Toronto, Ontario
+  lat: 43.65
+  lon: -79.38
+- id: cranbrook-bc
+  name: Cranbrook, British Columbia
+  lat: 49.51
+  lon: -115.77
+- id: montana
+  name: Montana, USA
+  note: State-level place for records that give no town.
+- id: washington-state
+  name: Washington (state), USA
+  note: State-level place for records that give no town.

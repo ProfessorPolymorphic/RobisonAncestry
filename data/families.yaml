@@ -190,14 +190,46 @@
     - {person: nicholas-robison, confidence: documented, sources: [family-knowledge, obit-bill-2011],
        basis: "Confirmed by Barrie Robison (father), Aug 2026."}
 
-- id: spencer+eva
-  partners: [spencer-lewis, eva-lewis]
-  sources: [lewis-family-photo-1911]
+# Spencer Lewis's three families (restructured Aug 2026 from the census images and the
+# Bonners Ferry Herald — see lewis-line-report-2026: the 1911 photo's Daisy was the WIFE
+# and Eva a DAUGHTER, the reverse of how family memory had it).
+
+- id: spencer+first-wife
+  partners: [spencer-lewis]
+  sources: [census-1910-us-eastport, census-1930-us-eastport]
+  notes: >
+    First marriage c.1904-05 (Spencer aged 29 at first marriage, 1930 census) to an
+    unidentified woman born in NEW YORK (Eva's mother's birthplace, 1910 census); ended
+    by death or divorce before his 1908 remarriage. Her name is the biggest open question
+    on this branch of the tree.
   children:
-    - {person: tom-lewis, confidence: stated, sources: [lewis-family-photo-1911]}
-    - {person: daisy-lewis, confidence: stated, sources: [lewis-family-photo-1911]}
-    - {person: jean-lillian-lewis-1909, confidence: inferred, sources: [lewis-family-photo-1911, jean-memorial-card-1976, spencer-lewis-clipping],
-       basis: "1911 family photo caption names Jean among Spencer and Eva's children; Jean's memorial card has her born at Eastport Aug 1909, where Spencer had been the customs officer since 1907."}
+    - {person: eva-lewis, confidence: inferred, sources: [census-1910-us-eastport, bfh-eva-wedding-1922],
+       basis: "1910 census: Eva R., daughter of Spencer, age 5, mother born New York — while wife Daisy is a Canadian in her FIRST marriage of 1 yr 8 mo, so Eva cannot be Daisy's child; the Herald (1922) calls Eva 'the daughter of U.S. Custom Inspector Spencer Lewis'."}
+
+- id: spencer+daisy
+  partners: [spencer-lewis, daisy-lewis]
+  events:
+    - {type: marriage, date: abt 1908-09, place: eastport-id, sources: [census-1910-us-eastport, bfh-daisy-obit-1919],
+       note: "1910 census: married 1 8/12 years (≈Aug-Sep 1908), his second marriage, her first; the 1919 obituary says they were married at Eastport by Rev. Henderson."}
+  children:
+    - {person: jean-lillian-lewis-1909, confidence: documented, sources: [census-1910-us-eastport, census-1920-us-eastport, census-1930-us-eastport, bc-death-reg-jean-1976],
+       basis: "Jean L., daughter, in Spencer's household 1910 (age 1), 1920 (10), and 1930 (as Jean L. Robison, 20); her BC death registration names father Spencer Lewis; the 1910 column gives her mother as the Canadian wife — Daisy."}
+    - {person: tom-lewis, confidence: documented, sources: [census-1920-us-eastport, census-1930-us-eastport],
+       basis: "Thomas R., son, in the household 1920 (age 8) and 1930 (18); born after the 1910 census, mother Canadian (Daisy)."}
+    - {person: della-lewis, confidence: documented, sources: [census-1920-us-eastport, census-1930-us-eastport],
+       basis: "Della M., daughter, in the household 1920 (age 4) and 1930 (15); mother Canadian (Daisy)."}
+
+- id: spencer+patricia
+  partners: [spencer-lewis, patricia-lewis]
+  events:
+    - {type: marriage, date: abt 1930, sources: [census-1940-us-eastport],
+       note: "Third marriage; eldest child born c.1930-31 in Washington. Patricia was 35 years his junior."}
+  children:
+    - {person: anna-mae-lewis, confidence: documented, sources: [census-1940-us-eastport]}
+    - {person: adele-rae-lewis, confidence: documented, sources: [census-1940-us-eastport]}
+    - {person: spencer-lewis-jr, confidence: documented, sources: [census-1940-us-eastport]}
+    - {person: wayne-roger-lewis, confidence: documented, sources: [census-1940-us-eastport]}
+    - {person: phillip-gene-lewis, confidence: documented, sources: [census-1940-us-eastport]}
 
 - id: fx+sarah
   partners: [francois-xavier-st-louis-1859, sarah-jane-stutt-1868]

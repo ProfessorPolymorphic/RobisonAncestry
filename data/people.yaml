@@ -490,11 +490,21 @@
        note: "Taught in the children's school in Nakusp for many years. Pythian Sister and O.E.S. member."}
     - {type: occupation, date: bet 1955 and 1975, place: nakusp, sources: [nakusp-library, jean-memorial-card-1976],
        note: "Took over the Nakusp public library in January 1955 (165 borrowers) and ran it for twenty years (the memorial card modestly says 'assisted ably in the library')."}
-    - {type: death, date: 1976-07-18, place: nakusp, sources: [jean-memorial-card-1976, typed-chart, bc-deaths],
-       note: "Arrow Lakes Hospital, aged 66; the year after she stepped down from the library. Service at St. Marks 22 July; cremation at Penticton."}
-  notes: Daughter of Spencer and Eva Lewis of Eastport, Idaho; sister of Tom and Daisy.
+    - {type: residence, date: 1930-04, place: eastport-id, sources: [census-1930-us-eastport],
+       note: "In the 1930 US census she appears under her married name — 'Robison, Jean L.', 20, married at 17 — living in her father Spencer's Eastport house with her infant son 'Robison, Herbert S.', grandson, 1 5/12, born 'Canada-English': Bert, before the family settled in the CPR towns."}
+    - {type: death, date: 1976-07-18, place: nakusp, sources: [jean-memorial-card-1976, typed-chart, bc-deaths, bc-death-reg-jean-1976],
+       note: "Arrow Lakes Hospital, aged 66; the year after she stepped down from the library. Service at St. Marks 22 July; cremation at Penticton. BC registration 1976-09-011745: father 'Lewis, Spencer'; mother's maiden name unknown, born Quebec (see daisy-lewis for the conflict)."}
+  notes: >
+    Daughter of Spencer Lewis and his second wife DAISY (d. 1919, when Jean was nine) —
+    the memorial card's 'Spencer and Eva Lewis' conflated her mother with her older
+    half-sister Eva (b. c.1905), who married Francis Fowler in 1922. Full siblings:
+    Thomas R. (b. c.1911 — the infant of the 1911 photo, younger than Jean) and Della M.
+    (b. c.1915), plus five much younger half-siblings from Spencer's third marriage.
+    The Aug 2026 research (lewis-line-report-2026) documents all of this from the
+    1910-1940 census images and the Bonners Ferry Herald.
   todo:
-    - Idaho birth record, Aug 1909 (Boundary County) — would name both parents and give Eva's maiden name.
+    - Idaho birth record, Aug 1909 (Bonner County at the time) — would name both parents and give Daisy's maiden name.
+    - "Her wedding announcement, Bonners Ferry Herald 14 Apr 1927 p.1 (paywalled at newspapers.com image 1116468201) — corroborates the typed chart's marriage date of 12 Apr 1927 and would give the ceremony's place and witnesses."
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Generation V — children of Herbert Barringer & Jean
@@ -506,6 +516,8 @@
   sex: M
   events:
     - {type: birth, date: 1928-05-03, place: carman-mb, sources: [typed-chart, obit-bert-2013], note: "Obituary gives Carman; chart gives the date."}
+    - {type: residence, date: 1930-04, place: eastport-id, sources: [census-1930-us-eastport],
+       note: "Aged ~2, enumerated as 'Robison, Herbert S., grandson, 1 5/12, born Canada-English' in his grandfather Spencer Lewis's Eastport household, with his mother Jean. (The census age implies b. c.Nov 1928 — a small conflict with 3 May 1928; enumerator imprecision is the likely cause.)"}
     - {type: residence, place: field-bc, sources: [obit-bert-2013], note: "Grew up mainly in Field, BC — so the family left Manitoba for the CPR towns between 1928 and 1938."}
     - {type: occupation, date: bet 1943 and 1986, sources: [obit-bert-2013], note: "Canadian Pacific Railway: telegrapher as a teenager, 43 years, retired 1986 as customer-service supervisor."}
     - {type: residence, date: 1976, place: revelstoke-bc, sources: [jean-memorial-card-1976], note: "'H.S. (Bert) of Revelstoke' in his mother's memorial card."}
@@ -674,32 +686,143 @@
 # ─────────────────────────────────────────────────────────────────────────────
 
 - id: spencer-lewis
-  names: [{given: Spencer, surname: Lewis, sources: [spencer-lewis-clipping, lewis-family-photo-1911]}]
+  names:
+    - {given: Spencer, surname: Lewis, sources: [spencer-lewis-clipping, lewis-family-photo-1911, official-registers-1907-21]}
+    - {given: Spencer A., surname: Lewis, kind: variant, sources: [census-1920-us-eastport, census-1930-us-eastport]}
   sex: M
   living: false
   events:
-    - {type: immigration, date: 1907-01, place: eastport-id, sources: [spencer-lewis-clipping],
-       note: "'Came west out of Michigan' in January 1907 to the Eastport border post."}
-    - {type: occupation, date: bet 1907 and 1943, place: eastport-id, sources: [spencer-lewis-clipping],
-       note: "U.S. Customs patrolman, then officer, at Eastport, Idaho for 36 years; retired c.1943."}
+    - {type: birth, date: abt 1875, place: michigan, sources: [census-1910-us-eastport, census-1920-us-eastport, census-1930-us-eastport, census-1940-us-eastport, official-registers-1907-21],
+       note: "c.1875-76: ages 34/44/54/64 in the 1910-1940 censuses; born MICHIGAN in all four censuses AND all seven Official Register editions 1907-1921. Father born OHIO, mother born NEW YORK (1920 and 1930 censuses; in 1910 he answered 'Don't Know' for both — possibly orphaned or estranged young). Parents' names unknown — this is where the documented Lewis chain ends."}
+    - {type: immigration, date: 1907-01, place: eastport-id, sources: [spencer-lewis-clipping, official-registers-1907-21],
+       note: "'Came west out of Michigan' in January 1907. No entry in the 1905 Official Register, and 'whence appointed: At Large, Idaho' — the 1907 Eastport post was his first federal appointment, not a transfer."}
+    - {type: occupation, date: bet 1907 and 1943, place: eastport-id, sources: [spencer-lewis-clipping, official-registers-1907-21, eastport-idgenweb-history],
+       note: "U.S. Customs Inspector at Eastport by 1 Jul 1907 ($3.50/day), Mounted Inspector (horseback patrolman) 1909-1913, Inspector thereafter; 36 years, retired Feb 1943 (Bonners Ferry Herald 18 Feb 1943 p.1; Spokesman-Review 16 Feb 1943). Owned his $800 frame house at the crossing itself. Prohibition-era whiskey seizures, WWI Liberty Loan chairman for Eastport, Secretary of the Copper Falls Mining Co. (1921)."}
+    - {type: residence, date: 1959-07, sources: [lewis-line-report-2026],
+       note: "Last found alive: a Bonners Ferry Herald page of 23 Jul 1959 shows him visiting. Not in the Idaho death index to 1951 nor the BC index to 2005; Washington State is the leading candidate for his death (see todo)."}
   notes: >
-    His posting explains two puzzles at once: why Jean was born at Eastport, and why Herbert
-    Barringer Robison's US border-crossing record was made at the Eastport/Kingsgate crossing.
+    Married three times: (1) c.1904-05 (age 29 at first marriage, 1930 census) to an
+    unidentified New York-born woman — mother of Eva R.; (2) c.Aug-Sep 1908 at Eastport
+    to Daisy (d. 1919) — mother of Jean, Thomas and Della; (3) c.1930 to Patricia, 35
+    years his junior — five more children. His posting explains two puzzles at once: why
+    Jean was born at Eastport, and why Herbert Barringer Robison's US border-crossing
+    record was made at the Eastport/Kingsgate crossing. The Meriwether Lewis family lore
+    ("some kind of great uncle") cannot be literally true — the explorer died unmarried
+    and childless, his only full brother Reuben died childless, his sister Jane's nine
+    children were Andersons and his half-siblings were Marks, so no Lewis-surname line
+    descends from that household at all; any real kinship would have to run through
+    Meriwether's paternal uncles (sons of Robert Lewis of Belvoir), and no evidence links
+    Spencer's Michigan family to the Virginia Lewises. Lewis was the 29th-commonest US
+    surname in 1910 — see lewis-line-report-2026 for the full assessment.
   todo:
-    - Full dates, Michigan origin, and Eva's maiden name — US census (Boundary County, Idaho 1910/20/30) would give the household.
+    - "Parents' names: indexed 1880-census search (FamilySearch/Ancestry) for a Michigan household with son Spencer b. c.1875-76, father b. Ohio, mother b. New York; cross-check Michigan birth records."
+    - "Exact birth date: WWI draft registration card, Sept 1918, Boundary County; or his federal personnel/retirement file (retired 1943) at NARA St. Louis."
+    - "Death, grave, obituary (alive Jul 1959): Washington Digital Archives death indexes, post-1951 Idaho index, FindAGrave (blocked to automated tools — search by hand)."
+    - "Reconcile the Paradise Valley Cemetery transcription 'Minnie Viola Lewis, 1887-1912, Husband: Spencer Lewis' — it conflicts with Mrs. Spencer Lewis (Daisy) alive at Eastport Aug-Oct 1912, so it is likely a different Spencer Lewis or a transcription error; do not graft onto this family without the original record."
+
+- id: daisy-lewis
+  names:
+    - {given: Daisy, surname: Lewis, sources: [lewis-family-photo-1911, bfh-daisy-obit-1919], note: "Lewis by marriage. The 1911 photo caption's 'Daisy' is the WIFE, not a child — family memory later swapped her role with daughter Eva's."}
+    - {given: Daisy J., surname: null, kind: variant, sources: [census-1910-us-eastport]}
+    - {given: Daisy, surname: Macdonald, kind: variant, sources: [bfh-spence-visits-1912, bc-marriage-1908-spence],
+       note: "HYPOTHESIS, well-supported but unproven: her sister was Mrs. J. H. Spence of Cranbrook — Annie Patrick Macdonald, b. Dalkeith, Scotland, daughter of William MacDonald and Alexanderina Patrick. Daisy's death certificate (#026548) or 1908 marriage record would settle it."}
+  sex: F
+  living: false
+  events:
+    - {type: birth, date: 1885-09-07, place: toronto-on, sources: [bfh-daisy-obit-1919],
+       note: "Obituary: born 7 Sep 1885 at Toronto. The 1910/1930 censuses and Jean's 1976 death registration say 'Canada-French'/Quebec instead — likely enumerator/informant error for a Scottish-named mother who died when her children were small; her household's mother tongue in 1920 is English."}
+    - {type: immigration, date: 1908, place: eastport-id, sources: [census-1910-us-eastport]}
+    - {type: death, date: 1919-07-25, place: eastport-id, sources: [bfh-daisy-obit-1919],
+       note: "Died at her Eastport home aged 33, leaving Jean (9), Thomas (~8) and Della (4). Idaho death certificate #026548 — the only Lewis death ever registered at Eastport, 1911-1951."}
+  notes: >
+    Jean Lillian's MOTHER — the central correction of the Aug 2026 research: the memorial
+    card's 'Spencer and Eva Lewis' conflated her with her stepdaughter. Married Spencer
+    c.Aug-Sep 1908 at Eastport, by Rev. Henderson (his second marriage, her first).
+  todo:
+    - "Order Idaho death certificate #026548 (d. 25 Jul 1919, Boundary County) — names her parents and settles the Macdonald hypothesis and the Toronto/Quebec conflict."
+    - "Bonner County marriage record, c.Aug-Sep 1908 (married at Eastport by Rev. Henderson) — Sandpoint courthouse / FamilySearch Idaho County Marriages / Western States Marriage Index."
 
 - id: eva-lewis
-  names: [{given: Eva, surname: null, sources: [lewis-family-photo-1911], note: "Lewis by marriage; maiden name unknown."}]
+  names:
+    - {given: Eva R., surname: Lewis, sources: [census-1910-us-eastport, census-1920-us-eastport, bfh-eva-wedding-1922]}
+    - {given: Eva, surname: Fowler, kind: variant, sources: [bfh-eva-wedding-1922], note: "Married name."}
   sex: F
   living: false
+  events:
+    - {type: birth, date: abt 1905, place: idaho, sources: [census-1910-us-eastport, census-1920-us-eastport],
+       note: "Age 5 in 1910, 14 in 1920; born Idaho, MOTHER born New York — Spencer's daughter from his first marriage, so Jean's older half-sister. Her Idaho birth implies Spencer was already in the West c.1905, before the clipping's January 1907 arrival at Eastport."}
+    - {type: marriage, date: 1922-06-26, place: eastport-id, sources: [bfh-eva-wedding-1922],
+       note: "To Francis Fowler of Calgary, at her Eastport home; the Herald calls her 'the daughter of U.S. Custom Inspector Spencer Lewis', with 'Miss Jean Lewis' among the shower guests."}
+  notes: >
+    Jean's half-sister, NOT her mother — the 1911 photo caption listed her among the
+    children correctly, and later family memory promoted her to wife. After the 1922
+    wedding she and Francis Fowler drop from free records (he is absent from Henderson's
+    1924 Calgary directory); an Aug 1953 Herald page co-mentions Spencer Lewis, Creston
+    and Calgary, hinting at continued contact.
+  todo:
+    - "Trace Eva and Francis Fowler after 1922 (Calgary? Creston?) — Alberta records, directories, obituaries."
+
 - id: tom-lewis
-  names: [{given: Tom, surname: Lewis, sources: [lewis-family-photo-1911]}]
+  names:
+    - {given: Thomas R., surname: Lewis, sources: [census-1920-us-eastport, census-1930-us-eastport]}
+    - {given: Tom, surname: Lewis, kind: variant, sources: [lewis-family-photo-1911]}
   sex: M
   living: false
-- id: daisy-lewis
-  names: [{given: Daisy, surname: Lewis, sources: [lewis-family-photo-1911]}]
+  events:
+    - {type: birth, date: abt 1911, place: idaho, sources: [census-1920-us-eastport, census-1930-us-eastport],
+       note: "Age 8 in Jan 1920, 18 in Apr 1930 — so YOUNGER than Jean, not older: he is the infant of the c.1911 photo. Daisy's son, born after the 1910 census."}
+  notes: >
+    Last certainly seen at home in Eastport, age 18, in the 1930 census. A Tom Lewis of
+    Bonners Ferry (railroad worker) married Virginia F. in 1956, settled in Snohomish
+    County, WA in 1963, and was living at Marysville, WA when Virginia died in Apr 2003 —
+    a plausible match (he would have been ~92) but nothing yet ties that Tom to Spencer.
+  todo:
+    - "Confirm or refute the Marysville WA Tom Lewis (m. Virginia F. 1956) as Thomas R. — a WA death record or obituary naming parents would decide."
+
+- id: della-lewis
+  names: [{given: Della M., surname: Lewis, sources: [census-1920-us-eastport, census-1930-us-eastport]}]
   sex: F
   living: false
+  events:
+    - {type: birth, date: abt 1915, place: idaho, sources: [census-1920-us-eastport, census-1930-us-eastport],
+       note: "Age 4 in Jan 1920 (b. c.Jun 1915), 15 in 1930 (marked absent from the household). Jean's full sister — entirely absent from family memory."}
+  todo:
+    - "Fate unknown after 1930 — marriage, death, or departure from Boundary County."
+
+- id: patricia-lewis
+  names: [{given: Patricia, surname: null, sources: [census-1940-us-eastport], note: "Lewis by marriage; maiden name unknown."}]
+  sex: F
+  living: false
+  events:
+    - {type: birth, date: abt 1911, place: montana, sources: [census-1940-us-eastport], note: "Age 29 in 1940 — 35 years Spencer's junior, two years younger than her stepdaughter Jean."}
+  todo:
+    - "Maiden name and marriage record, c.1930 (first child b. c.1930-31 in Washington)."
+
+- id: anna-mae-lewis
+  names: [{given: Anna Mae, surname: Lewis, sources: [census-1940-us-eastport]}]
+  sex: F
+  events:
+    - {type: birth, date: abt 1931, place: washington-state, sources: [census-1940-us-eastport]}
+- id: adele-rae-lewis
+  names: [{given: Adele Rae, surname: Lewis, sources: [census-1940-us-eastport]}]
+  sex: F
+  events:
+    - {type: birth, date: abt 1934, place: washington-state, sources: [census-1940-us-eastport]}
+- id: spencer-lewis-jr
+  names: [{given: Spencer Jr., surname: Lewis, sources: [census-1940-us-eastport]}]
+  sex: M
+  events:
+    - {type: birth, date: abt 1935, place: washington-state, sources: [census-1940-us-eastport]}
+- id: wayne-roger-lewis
+  names: [{given: Wayne Roger, surname: Lewis, sources: [census-1940-us-eastport]}]
+  sex: M
+  events:
+    - {type: birth, date: abt 1936, place: idaho, sources: [census-1940-us-eastport]}
+- id: phillip-gene-lewis
+  names: [{given: Phillip Gene, surname: Lewis, sources: [census-1940-us-eastport]}]
+  sex: M
+  events:
+    - {type: birth, date: abt 1938, place: idaho, sources: [census-1940-us-eastport]}
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Ivan's branch (from "A Journey So Far") — Paul the author, and the St. Louis line
