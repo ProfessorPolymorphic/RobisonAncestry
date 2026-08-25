@@ -179,7 +179,7 @@ def main(argv=None):
     s.set_defaults(fn=cmd_render)
     s = sub.add_parser("site", help="generate the interactive static site (GitHub Pages)")
     s.add_argument("--out", default=str(ROOT / "_site"))
-    s.add_argument("--focus", default="barrie-robison-1970", help="person whose direct line is drawn heavy ('' for none)")
+    s.add_argument("--focus", default="rory-bjorn-robison-2015", help="person whose direct line is drawn heavy ('' for none); the overview page's generation track follows this line up from the earliest ancestor")
     s.add_argument("--private", action="store_true", help="hide facts about living people")
     s.add_argument("--title", default="The Robison Family")
     s.add_argument("--repo", default="https://github.com/ProfessorPolymorphic/RobisonAncestry")
