@@ -670,24 +670,29 @@
   events:
     - {type: birth, date: 1983-11-20, sources: [typed-chart]}
 - id: andi-raine-hakeman-2012
+  sex: F
   names: [{given: Andi Raine, surname: Hakeman, sources: [family-knowledge]}]
   events:
     - {type: birth, date: 2012-06-15, sources: [family-knowledge], note: "Supplied by Barrie Robison, Aug 2026."}
 - id: rhys-spencer-hakeman-2014
+  sex: M
   names: [{given: Rhys Spencer, surname: Hakeman, sources: [family-knowledge]}]
   events:
     - {type: birth, date: 2014-08-19, sources: [family-knowledge], note: "Supplied by Barrie Robison, Aug 2026."}
 
 - id: jordan-ross-hakeman-1985
+  sex: M
   names: [{given: Jordan Ross, surname: Hakeman, sources: [typed-chart], note: Surname assumed from father.}]
   events:
     - {type: birth, date: 1985-01-16, sources: [typed-chart]}
 
 - id: alexi-grace-hakeman-2007
+  sex: F
   names: [{given: Alexi Grace, surname: Hakeman, sources: [family-knowledge]}]
   events:
     - {type: birth, date: 2007-12-08, sources: [family-knowledge], note: "Supplied by Barrie Robison, Aug 2026."}
 - id: riley-michael-hakeman-2015
+  sex: M
   names: [{given: Riley Michael, surname: Hakeman, sources: [family-knowledge]}]
   events:
     - {type: birth, date: 2015-05-09, sources: [family-knowledge], note: "Supplied by Barrie Robison, Aug 2026."}
@@ -698,11 +703,13 @@
   events:
     - {type: birth, date: 1989-01-20, sources: [family-knowledge], note: "Supplied by Barrie Robison, Aug 2026."}
 - id: rory-bjorn-robison-2015
+  sex: M
   names: [{given: Rory Bjorn, surname: Robison, sources: [family-knowledge]}]
   events:
     - {type: birth, date: 2015-08-31, sources: [family-knowledge], note: "Supplied by Barrie Robison, Aug 2026."}
-- id: ayra-jade-robison-2018
-  names: [{given: Ayra Jade, surname: Robison, sources: [family-knowledge]}]
+- id: arya-jade-robison-2018
+  sex: F
+  names: [{given: Arya Jade, surname: Robison, sources: [family-knowledge]}]
   events:
     - {type: birth, date: 2018-08-19, sources: [family-knowledge], note: "Supplied by Barrie Robison, Aug 2026."}
 

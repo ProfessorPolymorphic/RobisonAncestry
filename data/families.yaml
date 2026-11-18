@@ -177,7 +177,7 @@
   children:
     - {person: rory-bjorn-robison-2015, confidence: documented, sources: [family-knowledge],
        basis: "Stated by Barrie Robison, Aug 2026."}
-    - {person: ayra-jade-robison-2018, confidence: documented, sources: [family-knowledge],
+    - {person: arya-jade-robison-2018, confidence: documented, sources: [family-knowledge],
        basis: "Stated by Barrie Robison, Aug 2026."}
 
 - id: bill+pat

@@ -158,6 +158,40 @@ def cmd_gedcom(args):
     print(f"wrote {path.relative_to(ROOT)}")
 
 
+CHROME_CANDIDATES = [
+    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+    "/Applications/Chromium.app/Contents/MacOS/Chromium",
+    "google-chrome", "chromium", "chromium-browser",
+]
+
+
+def cmd_booklet(args):
+    import shutil
+    import subprocess
+    from .booklet import build, build_poster
+    t = load(args)
+    root = _resolve(t, args.root) if args.root else t.default_root()
+    focus = _resolve(t, args.focus) if args.focus else None
+    BUILD.mkdir(exist_ok=True)
+    html_path = BUILD / f"{args.name}.html"
+    pdf_path = BUILD / f"{args.name}.pdf"
+    html_path.write_text(build(t, root, focus), encoding="utf-8")
+    chrome = next((c for c in CHROME_CANDIDATES if Path(c).exists() or shutil.which(c)), None)
+    if not chrome:
+        print(f"wrote {html_path.relative_to(ROOT)} — no Chrome found; open it in a browser and Print → Save as PDF")
+        return
+    jobs = [(html_path, pdf_path)]
+    for tag, everyone in (("name-chart", False), ("full-tree", True)):
+        poster_html = BUILD / f"{args.name}-{tag}.html"
+        poster_html.write_text(build_poster(t, root, focus, everyone), encoding="utf-8")
+        jobs.append((poster_html, BUILD / f"{args.name}-{tag}-11x17.pdf"))
+    for src, dst in jobs:
+        subprocess.run([chrome, "--headless", "--disable-gpu", "--no-pdf-header-footer",
+                        "--virtual-time-budget=10000", f"--print-to-pdf={dst}", src.as_uri()],
+                       check=True, capture_output=True)
+    print("wrote " + ", ".join(str(d.relative_to(ROOT)) for _, d in jobs) + " (Letter booklet + two 11x17 charts)")
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(prog="tree.py", description="Robison family tree toolkit")
     ap.add_argument("--data", default=str(DATA), help="data directory (default: data/)")
@@ -184,6 +218,11 @@ def main(argv=None):
     s.add_argument("--title", default="The Robison Family")
     s.add_argument("--repo", default="https://github.com/ProfessorPolymorphic/RobisonAncestry")
     s.set_defaults(fn=cmd_site)
+    s = sub.add_parser("booklet", help="printable family-register PDF (US Letter) + 11x17 name-line and full-tree charts into build/")
+    s.add_argument("--root", help="earliest ancestor (default: earliest ancestor of the main surname)")
+    s.add_argument("--focus", default="rory-bjorn-robison-2015", help="youngest person of the direct line")
+    s.add_argument("--name", default="robison-family-register")
+    s.set_defaults(fn=cmd_booklet)
     s = sub.add_parser("gedcom", help="export GEDCOM 5.5.1 into build/"); s.add_argument("--name", default="robison"); s.set_defaults(fn=cmd_gedcom)
 
     args = ap.parse_args(argv)
